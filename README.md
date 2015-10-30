@@ -9,9 +9,9 @@ mzrimsek.github.io
 * Jade
 * SASS
 * Bootstrap
+* FontAwesome
 * jQuery
 * AngularJS
-* FontAwesome
 * [GitHub Pages](http://pages.github.com/)
 
 ## TODO
