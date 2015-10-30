@@ -108,6 +108,7 @@ a {
       margin-top: 0;
       margin-bottom: 5px;
       line-height: 1.5;
+      font-style: italic;
       .place a,
       .year {
         color: $secondaryText;
@@ -130,7 +131,10 @@ a {
   @extend .info;
   .item {
     .major {
-      padding-left: 5px;
+      margin-left:60px;
+    }
+    .year{
+      font-style: normal;
     }
   }
 }
