@@ -3,7 +3,7 @@ app.controller('MainController', ['$scope', function($scope) {
     name: 'Michael Zrimsek',
     title: 'Software Engineer',
     img: 'img/profile_pic.jpg',
-    desc: 'A short description about myself. Leggings heirloom irure plaid quis cornhole. Banksy mumblecore pour-over, dolor Odd Future flannel vero Truffaut cupidatat est narwhal Etsy. Godard locavore aute readymade. Banksy hashtag yr, High Life minim single-origin coffee ex occaecat plaid bespoke Carles selvage polaroid. XOXO vegan aesthetic authentic occupy. Chia Schlitz pickled butcher, stumptown aliquip paleo culpa farm-to-table. Occaecat banjo non, umami pork belly iPhone Marfa McSweeney\'s pug.',
+    desc: 'I am a ' + (new Date().getFullYear() - 1993) + ' year old Software Engineer.  I am extremely passioniate about my work and am always striving to find something new and exciting to work on.  Currently I am infatuated with the potential that the web has to offer as a development platform - I love keeping up on all the new technologies that are always comings out and trying to apply them to small projects, time permitting.  I am still working my way through school, but have an expected graduation of Spring 2017.  School takes up a considerable amount of my time, but I work on honing my skills in my free time.  I enjoy the feeling of setting out to learn something new and the pride that follows the successful application of something brand new.',
     location: 'Aurora, OH',
     email: 'mikezrimsek@gmail.com',
     website: 'http://zrimsek.com'
@@ -55,7 +55,7 @@ function Job(company, location, title, startDate, endDate, url, desc, projects) 
   this.projects = projects;
 }
 
-function Project(name, desc){
+function Project(name, desc) {
   this.name = name;
   this.desc = desc;
 }
