@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+$mainText: #021aae;
+$secondaryText: #1434ff;
+$header: #8394fe;
+$body: #dee2fe;
+$background: #4962ff;
+$accent: #ffd02e;
+$levelBackground: #e8e8e8;
+$levelLabel: #606060;
+html {
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background: $background !important;
+  color: $mainText;
+}
+header {
+  display: block;
+}
+a {
+  color: $secondaryText !important;
+}
+.header {
+  padding: 30px 0;
+  border-top: 10px solid $accent;
+  background: $header;
+  display: block;
+  h1 {
+    color: $mainText;
+  }
+  h2 {
+    color: $secondaryText;
+  }
+  @media(max-width: 767px) {
+    text-align: center;
+  }
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.profile-img {
+  margin-right: 30px;
+  width: 180px !important;
+  @media(max-width: 767px) {
+    float: none !important;
+    margin: 0 auto;
+  }
+}
+.profile-info {
+  @media(max-width: 767px) {
+    float: none !important;
+    text-align: center;
+  }
+}
+.networks a {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  .fa {
+    font-size: 25px;
+    padding-top: 8px;
+  }
+}
+.contact {
+  background: $body;
+  margin-top: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  span {
+    padding-left: 5px;
+  }
+  @media(max-width: 767px) {
+    margin-top: 30px;
+    float: none !important;
+  }
+}
+.section {
+  margin-bottom: 30px;
+  .section-inner {
+    background: $body;
+    padding: 30px;
+  }
+  .heading {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $mainText;
+    font-size: 24px;
+  }
+}
+.sections-wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.experience {
+  .item {
+    margin-bottom: 30px;
+    .title {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 5px;
+      line-height: 1.5;
+      .place a,
+      .year {
+        color: $secondaryText;
+        font-weight: normal;
+      }
+      .year {
+        padding-left: 5px;
+      }
+    }
+  }
+}
+.info {
+  .fa {
+    margin-right: 15px;
+    color: $accent;
+  }
+}
+.education {
+  @extend .experience;
+  @extend .info;
+  .item {
+    .major {
+      padding-left: 5px;
+    }
+  }
+}
+.skills {
+  .language-header {
+    font-size: 20px;
+    color: $secondaryText;
+  }
+  .skillset {
+    .item {
+      margin-bottom: 30px;
+    }
+    .level-title {
+      font-size: 16px;
+      margin-top: 0;
+      position: relative;
+    }
+    .level-label {
+      font-size: 14px;
+      color: $levelLabel;
+    }
+    .level-bar {
+      height: 15px;
+      background: $levelBackground;
+    }
+    .level-bar-inner {
+      height: 15px;
+      background: $accent;
+    }
+  }
+}

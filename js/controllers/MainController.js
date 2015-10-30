@@ -14,7 +14,7 @@ app.controller('MainController', ['$scope', function($scope) {
     google_plus: 'https://plus.google.com/+MikeZrimsek'
   };
   $scope.jobs = [
-    new Job('Verys', 'CA', 'Junior Software Engineer', 'January 2014', 'Present', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recently recognized as one of the fastest growing companies in Orange County, CA.', [
+    new Job('Verys', 'CA', 'Junior Web Software Engineer', 'January 2014', 'Present', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recently recognized as one of the fastest growing companies in Orange County, CA.', [
       new Project('TheRoadmap', 'A financial planner website originally built on a LAMP stack, but then rewritten in Java.  The application utilized the Spring framework using Thymeleaf as the templating engine, built with Gradle, running on a Tomcat server.  My duties on this project consisted of porting the codebase from PHP to Java, development and testing of new and existing features, server maintenance, and codebase upkeep.'),
       new Project('Parcel Pending', 'An electronic locker system used in apartment complex for easy, centralized package delivery.  My duties on this project revolved around doing extensive testing of both the website and the API developed for accessing information about the lockers.  Formulated thorough test cases to aid in regression testing that was required during each project sprint.')
     ])
@@ -64,8 +64,8 @@ function Skill(name, perc) {
   var setLevel = function(perc) {
     if (perc <= 30) return 'Beginner';
     else if (perc <= 60) return 'Intermediate';
-    else if (perc <= 80) return 'Pro';
-    else return 'Expert';
+    else if (perc <= 80) return 'Experienced';
+    else return 'Adept';
   };
   this.name = name;
   this.perc = perc;
