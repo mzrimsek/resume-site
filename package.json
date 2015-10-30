@@ -1,0 +1,22 @@
+{
+  "name": "mzrimsek.github.io",
+  "version": "1.0.0",
+  "description": "Personal website for Michael Zrimsek",
+  "dependencies": {
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-serve": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzrimsek/mzrimsek.github.io.git"
+  },
+  "author": "Mike Zrimsek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzrimsek/mzrimsek.github.io/issues"
+  },
+  "homepage": "https://github.com/mzrimsek/mzrimsek.github.io#readme"
+}

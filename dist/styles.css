@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html {
+  box-sizing: border-box;
+  font-family: Roboto; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  background: #4962ff !important;
+  color: #021aae; }
+
+header {
+  display: block; }
+
+a {
+  color: #1434ff !important; }
+
+.header {
+  padding: 30px 0;
+  border-top: 10px solid #ffd02e;
+  background: #8394fe;
+  display: block; }
+  .header h1 {
+    color: #021aae; }
+  .header h2 {
+    color: #1434ff; }
+  @media (max-width: 767px) {
+    .header {
+      text-align: center; } }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.profile-img {
+  margin-right: 30px;
+  width: 180px !important; }
+  @media (max-width: 767px) {
+    .profile-img {
+      float: none !important;
+      margin: 0 auto; } }
+
+@media (max-width: 767px) {
+  .profile-info {
+    float: none !important;
+    text-align: center; } }
+
+.networks a {
+  width: 36px;
+  height: 36px;
+  display: inline-block; }
+  .networks a .fa {
+    font-size: 25px;
+    padding-top: 8px; }
+
+.contact {
+  background: #dee2fe;
+  margin-top: 60px;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .contact span {
+    padding-left: 5px; }
+  @media (max-width: 767px) {
+    .contact {
+      margin-top: 30px;
+      float: none !important; } }
+
+.section {
+  margin-bottom: 30px; }
+  .section .section-inner {
+    background: #dee2fe;
+    padding: 30px; }
+  .section .heading {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #021aae;
+    font-size: 24px; }
+
+.sections-wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.experience .item, .education .item {
+  margin-bottom: 30px; }
+  .experience .item .title, .education .item .title {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.5; }
+    .experience .item .title .place a, .education .item .title .place a,
+    .experience .item .title .year, .education .item .title .year {
+      color: #1434ff;
+      font-weight: normal; }
+    .experience .item .title .year, .education .item .title .year {
+      padding-left: 5px; }
+
+.info .fa, .education .fa {
+  margin-right: 15px;
+  color: #ffd02e; }
+
+.education .item .major {
+  padding-left: 5px; }
+
+.skills .language-header {
+  font-size: 20px;
+  color: #1434ff; }
+
+.skills .skillset .item {
+  margin-bottom: 30px; }
+
+.skills .skillset .level-title {
+  font-size: 16px;
+  margin-top: 0;
+  position: relative; }
+
+.skills .skillset .level-label {
+  font-size: 14px;
+  color: #606060; }
+
+.skills .skillset .level-bar {
+  height: 15px;
+  background: #e8e8e8; }
+
+.skills .skillset .level-bar-inner {
+  height: 15px;
+  background: #ffd02e; }
