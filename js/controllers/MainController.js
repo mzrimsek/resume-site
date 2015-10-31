@@ -1,9 +1,19 @@
 app.controller('MainController', ['$scope', function($scope) {
+  var calcAge = function(birthMonth, birthDay, birthYear) {
+    var today = new Date();
+    var age = today.getFullYear() - birthYear;
+    if (today.getMonth() < birthMonth - 1) {
+      age--;
+    } else if (today.getMonth() === birthMonth - 1 && today.getDay() < birthDay) {
+      age--;
+    }
+    return age;
+  };
   $scope.about = {
     name: 'Michael Zrimsek',
     title: 'Software Engineer',
     img: 'img/profile_pic.jpg',
-    desc: 'I am a ' + (new Date().getFullYear() - 1993) + ' year old Software Engineer.  I am extremely passioniate about my work and am always striving to find something new and exciting to work on.  Currently I am infatuated with the potential that the web has to offer as a development platform - I love keeping up on all the new technologies that are always comings out and trying to apply them to small projects, time permitting.  I am still working my way through school, but have an expected graduation of Spring 2017.  School takes up a considerable amount of my time, but I work on honing my skills in my free time.  I enjoy the feeling of setting out to learn something new and the pride that follows the successful application of something brand new.',
+    desc: 'I am a ' + calcAge(7, 22, 1993) + ' year old Software Engineer.  I am extremely passioniate about my work and am always striving to find something new and exciting to work on.  Currently I am infatuated with the potential that the web has to offer as a development platform - I love keeping up on all the new technologies that are always comings out and trying to apply them to small projects, time permitting.  I am still working my way through school, but have an expected graduation of Spring 2017.  School takes up a considerable amount of my time, but I work on honing my skills in my free time.  I enjoy the feeling of setting out to learn something new and the pride that follows the successful application of something brand new.',
     location: 'Aurora, OH',
     email: 'mikezrimsek@gmail.com',
     website: 'http://zrimsek.com'
