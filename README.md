@@ -15,8 +15,6 @@ mzrimsek.github.io
 * [GitHub Pages](http://pages.github.com/)
 
 ## TODO
-* About Me
-* Skills Info
 * New profile picture
 * Some other cool stuff
 

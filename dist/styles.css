@@ -9,24 +9,24 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #4962ff !important;
-  color: #021aae; }
+  background: #1976D2 !important;
+  color: #212121; }
 
 header {
   display: block; }
 
 a {
-  color: #1434ff !important; }
+  color: #03A9F4; }
 
 .header {
   padding: 30px 0;
-  border-top: 10px solid #ffd02e;
-  background: #8394fe;
+  border-top: 10px solid #03A9F4;
+  background: #2196F3;
   display: block; }
   .header h1 {
-    color: #021aae; }
+    color: #212121; }
   .header h2 {
-    color: #1434ff; }
+    color: #727272; }
   @media (max-width: 767px) {
     .header {
       text-align: center; } }
@@ -59,7 +59,7 @@ a {
     padding-top: 8px; }
 
 .contact {
-  background: #dee2fe;
+  background: #BBDEFB;
   margin-top: 60px;
   font-weight: bold;
   text-transform: uppercase; }
@@ -73,12 +73,12 @@ a {
 .section {
   margin-bottom: 30px; }
   .section .section-inner {
-    background: #dee2fe;
+    background: #BBDEFB;
     padding: 30px; }
   .section .heading {
     margin-top: 0;
     margin-bottom: 30px;
-    color: #021aae;
+    color: #212121;
     font-size: 24px; }
 
 .sections-wrapper {
@@ -93,16 +93,18 @@ a {
     margin-bottom: 5px;
     line-height: 1.5;
     font-style: italic; }
-    .experience .item .title .place a, .education .item .title .place a,
     .experience .item .title .year, .education .item .title .year {
-      color: #1434ff;
+      color: #727272;
       font-weight: normal; }
     .experience .item .title .year, .education .item .title .year {
       padding-left: 5px; }
 
+.experience .project .title, .education .project .title {
+  color: #2196F3; }
+
 .info .fa, .education .fa {
   margin-right: 15px;
-  color: #ffd02e; }
+  color: #03A9F4; }
 
 .education .item .major {
   margin-left: 60px; }
@@ -112,7 +114,7 @@ a {
 
 .skills .language-header {
   font-size: 20px;
-  color: #1434ff; }
+  color: #727272; }
 
 .skills .skillset .item {
   margin-bottom: 30px; }
@@ -124,12 +126,12 @@ a {
 
 .skills .skillset .level-label {
   font-size: 14px;
-  color: #606060; }
+  color: #727272; }
 
 .skills .skillset .level-bar {
   height: 15px;
-  background: #e8e8e8; }
+  background: #B6B6B6; }
 
 .skills .skillset .level-bar-inner {
   height: 15px;
-  background: #ffd02e; }
+  background: #03A9F4; }

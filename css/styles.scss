@@ -1,12 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-$mainText: #021aae;
-$secondaryText: #1434ff;
-$header: #8394fe;
-$body: #dee2fe;
-$background: #4962ff;
-$accent: #ffd02e;
-$levelBackground: #e8e8e8;
-$levelLabel: #606060;
+$darkPrimary:#1976D2;
+$primary: #2196F3;
+$lightPrimary: #BBDEFB;
+$accent: #03A9F4;
+$primaryText: #212121;
+$secondaryText: #727272;
+$divider: #B6B6B6;
+
 html {
   box-sizing: border-box;
   font-family: Roboto;
@@ -17,22 +17,22 @@ html {
   box-sizing: inherit;
 }
 body {
-  background: $background !important;
-  color: $mainText;
+  background: $darkPrimary !important;
+  color: $primaryText;
 }
 header {
   display: block;
 }
 a {
-  color: $secondaryText !important;
+  color: $accent;
 }
 .header {
   padding: 30px 0;
   border-top: 10px solid $accent;
-  background: $header;
+  background: $primary;
   display: block;
   h1 {
-    color: $mainText;
+    color: $primaryText;
   }
   h2 {
     color: $secondaryText;
@@ -71,7 +71,7 @@ a {
   }
 }
 .contact {
-  background: $body;
+  background: $lightPrimary;
   margin-top: 60px;
   font-weight: bold;
   text-transform: uppercase;
@@ -86,13 +86,13 @@ a {
 .section {
   margin-bottom: 30px;
   .section-inner {
-    background: $body;
+    background: $lightPrimary;
     padding: 30px;
   }
   .heading {
     margin-top: 0;
     margin-bottom: 30px;
-    color: $mainText;
+    color: $primaryText;
     font-size: 24px;
   }
 }
@@ -109,7 +109,6 @@ a {
       margin-bottom: 5px;
       line-height: 1.5;
       font-style: italic;
-      .place a,
       .year {
         color: $secondaryText;
         font-weight: normal;
@@ -117,6 +116,11 @@ a {
       .year {
         padding-left: 5px;
       }
+    }
+  }
+  .project{
+    .title{
+      color:$primary;
     }
   }
 }
@@ -154,11 +158,11 @@ a {
     }
     .level-label {
       font-size: 14px;
-      color: $levelLabel;
+      color: $secondaryText;
     }
     .level-bar {
       height: 15px;
-      background: $levelBackground;
+      background: $divider;
     }
     .level-bar-inner {
       height: 15px;
