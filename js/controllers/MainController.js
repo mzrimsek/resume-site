@@ -4,7 +4,7 @@ app.controller('MainController', ['$scope', function($scope) {
     var age = today.getFullYear() - birthYear;
     if (today.getMonth() < birthMonth - 1) {
       age--;
-    } else if (today.getMonth() === birthMonth - 1 && today.getDay() < birthDay) {
+    } else if ((today.getMonth() === birthMonth - 1) && (today.getDay() < birthDay)) {
       age--;
     }
     return age;
