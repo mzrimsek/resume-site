@@ -10,7 +10,6 @@ mzrimsek.github.io
 * SASS
 * Bootstrap
 * FontAwesome
-* Material Design Lite
 * jQuery
 * AngularJS
 * [GitHub Pages](http://pages.github.com/)

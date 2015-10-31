@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 html {
   box-sizing: border-box;
   font-family: Roboto; }
@@ -17,7 +16,7 @@ header {
   display: block; }
 
 a {
-  color: #1976d2 !important; }
+  color: #03a9f4; }
 
 .header {
   padding: 30px 0;

@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 $darkPrimary: #1976d2;
 $primary: #2196f3;
 $lightPrimary: #bbdefb;
@@ -24,7 +23,7 @@ header {
   display: block;
 }
 a {
-  color: $darkPrimary !important;
+  color: $accent;
 }
 .header {
   padding: 30px 0;
