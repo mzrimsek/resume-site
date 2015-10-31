@@ -1,12 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-$darkPrimary:#1976D2;
-$primary: #2196F3;
-$lightPrimary: #BBDEFB;
-$accent: #03A9F4;
+$darkPrimary: #1976d2;
+$primary: #2196f3;
+$lightPrimary: #bbdefb;
+$accent: #03a9f4;
 $primaryText: #212121;
 $secondaryText: #727272;
-$divider: #B6B6B6;
-
+$divider: #b6b6b6;
 html {
   box-sizing: border-box;
   font-family: Roboto;
@@ -18,7 +17,7 @@ html {
 }
 body {
   background: $darkPrimary !important;
-  color: $primaryText;
+  color: $primaryText !important;
 }
 header {
   display: block;
@@ -118,9 +117,9 @@ a {
       }
     }
   }
-  .project{
-    .title{
-      color:$primary;
+  .project {
+    .title {
+      color: $primary;
     }
   }
 }
@@ -135,9 +134,9 @@ a {
   @extend .info;
   .item {
     .major {
-      margin-left:60px;
+      margin-left: 60px;
     }
-    .year{
+    .year {
       font-style: normal;
     }
   }

@@ -9,19 +9,19 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #1976D2 !important;
-  color: #212121; }
+  background: #1976d2 !important;
+  color: #212121 !important; }
 
 header {
   display: block; }
 
 a {
-  color: #03A9F4; }
+  color: #03a9f4; }
 
 .header {
   padding: 30px 0;
-  border-top: 10px solid #03A9F4;
-  background: #2196F3;
+  border-top: 10px solid #03a9f4;
+  background: #2196f3;
   display: block; }
   .header h1 {
     color: #212121; }
@@ -59,7 +59,7 @@ a {
     padding-top: 8px; }
 
 .contact {
-  background: #BBDEFB;
+  background: #bbdefb;
   margin-top: 60px;
   font-weight: bold;
   text-transform: uppercase; }
@@ -73,7 +73,7 @@ a {
 .section {
   margin-bottom: 30px; }
   .section .section-inner {
-    background: #BBDEFB;
+    background: #bbdefb;
     padding: 30px; }
   .section .heading {
     margin-top: 0;
@@ -100,11 +100,11 @@ a {
       padding-left: 5px; }
 
 .experience .project .title, .education .project .title {
-  color: #2196F3; }
+  color: #2196f3; }
 
 .info .fa, .education .fa {
   margin-right: 15px;
-  color: #03A9F4; }
+  color: #03a9f4; }
 
 .education .item .major {
   margin-left: 60px; }
@@ -130,8 +130,8 @@ a {
 
 .skills .skillset .level-bar {
   height: 15px;
-  background: #B6B6B6; }
+  background: #b6b6b6; }
 
 .skills .skillset .level-bar-inner {
   height: 15px;
-  background: #03A9F4; }
+  background: #03a9f4; }
