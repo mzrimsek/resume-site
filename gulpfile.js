@@ -31,31 +31,7 @@ gulp.task('controllers', function() {
   .pipe(gulp.dest('dist/js/controllers'));
 });
 
-gulp.task('directives', function() {
-  return gulp.src('js/directives/*.js')
-  .pipe(uglify())
-  .pipe(gulp.dest('dist/js/directives'));
-});
-
-gulp.task('directiveTemplates', function() {
-  return gulp.src('templates/directives/*.jade')
-    .pipe(jade())
-    .pipe(gulp.dest('dist/js/directives'));
-});
-
-gulp.task('services', function() {
-  return gulp.src('js/services/*.js')
-  .pipe(uglify())
-  .pipe(gulp.dest('dist/js/services'));
-});
-
-gulp.task('views', function() {
-  return gulp.src('templates/views/*.jade')
-    .pipe(jade())
-    .pipe(gulp.dest('dist/views'));
-});
-
-gulp.task('build', ['templates', 'styles', 'app', 'controllers', 'directives', 'directiveTemplates', 'services', 'views']);
+gulp.task('build', ['templates', 'styles', 'app', 'controllers']);
 
 gulp.task('default', ['build'], function() {
   gulp.watch(

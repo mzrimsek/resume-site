@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".main").show(),$(".other").hide(),$(".nav a").on("click",function(){$(".nav").find(".active").removeClass("active");var a=$(this).parent();a.addClass("active");var e=a.attr("id");"homeNav"===e?($(".main").show(),$(".other").hide()):"otherNav"===e&&($(".main").hide(),$(".other").show())})});
