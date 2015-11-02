@@ -142,4 +142,6 @@ a {
 .todo-list {
   margin-top: 60px; }
   .todo-list .todo-item {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    background: #bbdefb;
+    color: #212121; }
