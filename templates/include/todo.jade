@@ -1,0 +1,7 @@
+div.main(ng-controller="TodoController" id="todo")
+  header.header
+    div.container
+      h1 Simple Todo App
+  div.container
+    ul.todo-list.list-group
+      li.todo-item.list-group-item(ng-repeat="item in todoItems" ng-click="removeItem($index)") {{item.action}}

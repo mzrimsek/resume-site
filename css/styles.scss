@@ -1,4 +1,7 @@
+//Imports
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+//Colors
 $darkPrimary: #1976d2;
 $primary: #2196f3;
 $lightPrimary: #bbdefb;
@@ -6,6 +9,8 @@ $accent: #03a9f4;
 $primaryText: #212121;
 $secondaryText: #727272;
 $divider: #b6b6b6;
+
+//General Styles
 html {
   box-sizing: border-box;
   font-family: Roboto;
@@ -25,8 +30,18 @@ header {
 a {
   color: $accent;
 }
-.header {
+.main {
   margin-top: 51px;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+//Resume Styles
+.header {
   padding: 30px 0;
   border-top: 10px solid $accent;
   background: $primary;
@@ -40,12 +55,6 @@ a {
   @media(max-width: 767px) {
     text-align: center;
   }
-}
-.left {
-  float: left;
-}
-.right {
-  float: right;
 }
 .profile-img {
   margin-right: 30px;
@@ -168,5 +177,13 @@ a {
       height: 15px;
       background: $accent;
     }
+  }
+}
+
+//Todo Styles
+.todo-list {
+  margin-top: 60px;
+  .todo-item {
+    margin-bottom: 20px;
   }
 }

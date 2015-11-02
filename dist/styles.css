@@ -18,8 +18,16 @@ header {
 a {
   color: #03a9f4; }
 
+.main {
+  margin-top: 51px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
 .header {
-  margin-top: 51px;
   padding: 30px 0;
   border-top: 10px solid #03a9f4;
   background: #2196f3;
@@ -31,12 +39,6 @@ a {
   @media (max-width: 767px) {
     .header {
       text-align: center; } }
-
-.left {
-  float: left; }
-
-.right {
-  float: right; }
 
 .profile-img {
   margin-right: 30px;
@@ -136,3 +138,8 @@ a {
 .skills .skillset .level-bar-inner {
   height: 15px;
   background: #03a9f4; }
+
+.todo-list {
+  margin-top: 60px; }
+  .todo-list .todo-item {
+    margin-bottom: 20px; }

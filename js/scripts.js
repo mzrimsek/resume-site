@@ -1,18 +1,18 @@
 $(document).ready(function() {
-  $('.main').show();
-  $('.other').hide();
+  $('#resume').show();
+  $('#todo').hide();
 
-  $(".nav a").on("click", function() {
-    $(".nav").find(".active").removeClass("active");
+  $('.nav a').on('click', function() {
+    $('.nav').find('.active').removeClass('active');
     var $currentNav = $(this).parent();
-    $currentNav.addClass("active");
+    $currentNav.addClass('active');
     var $currentId = $currentNav.attr('id');
     if ($currentId === 'homeNav') {
-      $('.main').show();
-      $('.other').hide();
-    } else if ($currentId === 'otherNav') {
-      $('.main').hide();
-      $('.other').show();
+      $('#resume').show();
+      $('#todo').hide();
+    } else if ($currentId === 'todoNav') {
+      $('#resume').hide();
+      $('#todo').show();
     }
   });
 });

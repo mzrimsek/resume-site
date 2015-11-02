@@ -1,4 +1,4 @@
-app.controller('MainController', ['$scope', function($scope) {
+app.controller('ResumeController', ['$scope', function($scope) {
   $scope.about = {
     name: 'Michael Zrimsek',
     title: 'Software Engineer',
