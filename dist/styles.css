@@ -145,3 +145,8 @@ a {
     margin-bottom: 20px;
     background: #bbdefb;
     color: #212121; }
+    .todo-list .todo-item .todo-text {
+      margin-left: 10px; }
+    .todo-list .todo-item .done-true {
+      text-decoration: line-through;
+      color: #03a9f4; }

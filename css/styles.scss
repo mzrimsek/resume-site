@@ -187,5 +187,12 @@ a {
     margin-bottom: 20px;
     background:$lightPrimary;
     color:$primaryText;
+    .todo-text{
+      margin-left:10px;
+    }
+    .done-true{
+      text-decoration:line-through;
+      color: $accent;
+    }
   }
 }
