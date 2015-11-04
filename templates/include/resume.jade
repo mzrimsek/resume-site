@@ -58,7 +58,6 @@ div.main(ng-controller="ResumeController" id="resume")
                     span , {{school.location}}
                   span.year ({{school.startDate}} - {{school.endDate}})
                 p.major {{school.major}}
-              
       
       div.secondary.col-md-4.col-sm-12.col-xs-12
         aside.info.aside.section
@@ -84,17 +83,18 @@ div.main(ng-controller="ResumeController" id="resume")
             h2.heading Skills
             div.content
               p.intro {{skills.info}}
-              h2.language-header Languages
               div.skillset
                 div.item(ng-repeat="lang in skills.languages")
                   h3.level-title {{lang.name}}
                     span.level-label.right {{lang.level}}
                   div.level-bar
                     div.level-bar-inner(style="width:{{lang.perc}}%;")
-              h2.language-header Frameworks
-              div.skillset
-                div.item(ng-repeat="framework in skills.frameworks")
-                  h3.level-title {{framework.name}}
-                    span.level-label.right {{framework.level}}
-                  div.level-bar
-                    div.level-bar-inner(style="width:{{framework.perc}}%;")
+        
+        aside.technologies.aside.section
+          div.section-inner
+            h2.heading Built With
+            div.content
+              ul.list-unstyled
+                li(ng-repeat="tech in technologies")
+                  i.fa.fa-wrench
+                  a.technology(ng-href="{{tech.url}}" target="_blank") {{tech.name}}

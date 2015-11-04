@@ -20,19 +20,18 @@ app.controller('ResumeController', ['$scope', function($scope) {
     ])
   ];
   $scope.skills = {
-    info: 'My goal is to constantly be learning something as there is always something new and exciting to try out in a project.  Below are the skills I have learned and honed through projects I have worked on.',
+    info: 'My goal is to constantly be learning something as there is always something new and exciting to try out in a project.  Below are the skills I have learned and honed through projects I have worked on both at work and in my spare time.',
     languages: [
       new Skill('Java', 95),
+      new Skill('Spring', 75),
       new Skill('C/C++', 55),
       new Skill('C#', 60),
       new Skill('Javascript/JQuery', 90),
       new Skill('HTML5/CSS3', 90),
       new Skill('MySQL', 60),
-      new Skill('Python', 50)
-    ],
-    frameworks: [
-      new Skill('Spring', 75),
-      new Skill('Django', 45),
+      new Skill('Python', 50),
+      new Skill('Django', 30),
+      new Skill('PHP', 30),
       new Skill('Node.js', 30),
       new Skill('AngularJS', 60)
     ]
@@ -41,6 +40,15 @@ app.controller('ResumeController', ['$scope', function($scope) {
     new School('Kent State University', 'OH', 'Computer Science', 'September 2015', 'Present'),
     new School('Irvine Valley College', 'CA', 'Computer Science', 'September 2012', 'May 2015'),
     new School('Cal Poly Pomona', 'CA', 'Computer Science', 'September 2011', 'May 2012')
+  ];
+  $scope.technologies = [
+    new Technology('Jade', 'http://jade-lang.com/'),
+    new Technology('SASS', 'http://sass-lang.com/'),
+    new Technology('Gulp', 'http://gulpjs.com/'),
+    new Technology('Bootstrap', 'http://getbootstrap.com/'),
+    new Technology('jQuery', 'https://jquery.com/'),
+    new Technology('AngularJS', 'https://angularjs.org/'),
+    new Technology('Github Pages', 'https://pages.github.com/')
   ];
 }]);
 
@@ -125,4 +133,14 @@ function School(name, location, major, startDate, endDate) {
   this.major = major;
   this.startDate = startDate;
   this.endDate = endDate;
+}
+
+/**
+ * Constructor for new Technology object
+ * @param {String} name Name of technology
+ * @param {String} url  URL to find more information about technology at
+ */
+function Technology(name, url){
+  this.name = name;
+  this.url = url;
 }

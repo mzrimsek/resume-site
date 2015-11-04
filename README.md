@@ -8,8 +8,8 @@ mzrimsek.github.io
 ## Technology
 * Jade
 * SASS
+* Gulp
 * Bootstrap
-* FontAwesome
 * jQuery
 * AngularJS
 * [GitHub Pages](http://pages.github.com/)

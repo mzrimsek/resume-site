@@ -37,7 +37,7 @@ $(document).ready(function() {
  * @return {Boolean}         True if element is visible.
  */
 function isVisible(element) {
-  var objectBottom = $(element).offset().top + $(element).outerHeight() / 2;
+  var objectBottom = $(element).offset().top + $(element).outerHeight() / 3;
   var windowBottom = $(window).scrollTop() + $(window).innerHeight();
 
   return (objectBottom < windowBottom);
@@ -51,8 +51,8 @@ function fadeIn(elements) {
   $(elements).each(function() {
     if (isVisible($(this)) && $(this).css('opacity') == '0') {
       $(this).animate({
-        'opacity': '1'
-      }, 500);
+        'opacity': '1',
+      }, 300);
     }
   });
 }

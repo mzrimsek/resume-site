@@ -105,7 +105,7 @@ a {
 .experience .project .title, .education .project .title {
   color: #2196f3; }
 
-.info .fa, .education .fa {
+.info .fa, .education .fa, .technologies .fa {
   margin-right: 15px;
   color: #03a9f4; }
 
@@ -114,10 +114,6 @@ a {
 
 .education .item .year {
   font-style: normal; }
-
-.skills .language-header {
-  font-size: 20px;
-  color: #727272; }
 
 .skills .skillset .item {
   margin-bottom: 30px; }

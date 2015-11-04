@@ -7,12 +7,19 @@ app.controller('TodoController', ['$scope', function($scope) {
     new TodoItem('Set Up Database to Store and Modify Data', false),
     new TodoItem('Do some stuff with fun APIs', false)
   ];
+  //get total number of items in list
   $scope.getTotalItems = function() {
     return $scope.todoItems.length;
   };
+  //add new item to list
   $scope.addNewItem = function() {
-    $scope.todoItems.push(new TodoItem($scope.newTodoText, false));
+    //don't want to add blank items
+    if($scope.newTodoText){
+      $scope.todoItems.push(new TodoItem($scope.newTodoText, false));
+      $scope.newTodoText = ''; //reset input field after item has been added
+    }
   };
+  //remove all items marked as complete from list
   $scope.clearCompleted = function() {
     $scope.todoItems = _.filter($scope.todoItems, function(todoItem) {
       return !todoItem.complete;

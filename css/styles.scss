@@ -152,10 +152,6 @@ a {
   }
 }
 .skills {
-  .language-header {
-    font-size: 20px;
-    color: $secondaryText;
-  }
   .skillset {
     .item {
       margin-bottom: 30px;
@@ -179,19 +175,22 @@ a {
     }
   }
 }
+.technologies {
+  @extend .info;
+}
 
 //Todo Styles
 .todo-list {
   margin-top: 60px;
   .todo-item {
     margin-bottom: 20px;
-    background:$lightPrimary;
-    color:$primaryText;
-    .todo-text{
-      margin-left:10px;
+    background: $lightPrimary;
+    color: $primaryText;
+    .todo-text {
+      margin-left: 10px;
     }
-    .done-true{
-      text-decoration:line-through;
+    .done-true {
+      text-decoration: line-through;
       color: $accent;
     }
   }
