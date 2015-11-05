@@ -41,19 +41,19 @@ a {
 }
 
 //Footer styles
-.footer{
+.footer {
   bottom: 0;
   width: 100%;
   height: 60px;
   background: #f8f8f8;
-  border:#e7e7e7;
-  .container{
+  border: #e7e7e7;
+  .container {
     padding-left: 15px;
-    padding-right:15px;
-    .text-muted{
-      margin:20px 0;
-      a{
-        padding-left:5px;
+    padding-right: 15px;
+    .text-muted {
+      margin: 20px 0;
+      a {
+        padding-left: 5px;
       }
     }
   }
@@ -205,6 +205,9 @@ a {
     margin-bottom: 20px;
     background: $lightPrimary;
     color: $primaryText;
+    .todo-checked {
+      display: none;
+    }
     .todo-text {
       margin-left: 10px;
     }
@@ -221,6 +224,6 @@ a {
   margin-left: 15px;
   margin-right: 15px;
 }
-.todo-clear{
-  margin-bottom:30px;
+.todo-clear {
+  margin-bottom: 30px;
 }
