@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 html {
   box-sizing: border-box;
-  font-family: Roboto; }
+  font-family: Roboto;
+  height: 100%; }
 
 *,
 *:before,
@@ -10,7 +11,8 @@ html {
 
 body {
   background: #1976d2 !important;
-  color: #212121 !important; }
+  color: #212121 !important;
+  height: 100%; }
 
 header {
   display: block; }
@@ -18,8 +20,13 @@ header {
 a {
   color: #03a9f4; }
 
+#wrap {
+  min-height: 100%; }
+
 .main {
-  margin-top: 51px; }
+  margin-top: 51px;
+  overflow: auto;
+  padding-bottom: 60px; }
 
 .left {
   float: left; }
@@ -28,9 +35,10 @@ a {
   float: right; }
 
 .footer {
-  bottom: 0;
-  width: 100%;
+  position: relative;
+  margin-top: -60px;
   height: 60px;
+  clear: both;
   background: #f8f8f8;
   border: #e7e7e7; }
   .footer .container {
@@ -157,8 +165,6 @@ a {
     color: #212121; }
     .todo-list .todo-item .todo-checked {
       display: none; }
-    .todo-list .todo-item .todo-text {
-      margin-left: 10px; }
     .todo-list .todo-item .done-true {
       text-decoration: line-through;
       color: #03a9f4; }

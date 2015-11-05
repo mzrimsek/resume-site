@@ -14,10 +14,11 @@ html(lang="en")
     script(src="js/scripts.js")
     
   body(ng-app="ZrimsekWeb")
-  
-    include ./include/nav.jade
-    include ./include/resume.jade
-    include ./include/todo.jade
+    
+    div(id="wrap")
+      include ./include/nav.jade
+      include ./include/resume.jade
+      include ./include/todo.jade
     
     footer.footer
       div.container

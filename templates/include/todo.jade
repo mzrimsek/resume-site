@@ -8,7 +8,7 @@ div.main(ng-controller="TodoController" id="todo")
       form.todo-add.input-group
         input.form-control(type="text" placeholder="What do I need to do..." ng-model="newTodoText" ng-model-instant)
         span.input-group-btn
-          button.btn.btn-default(type="button" ng-click="addNewItem()") Add
+          button.btn.btn-default(type="button" ng-click="addItem()") Add
     ul.todo-list.list-group
       li.todo-item.list-group-item(ng-repeat="item in todoItems")
         input.todo-checked(type="checkbox" ng-model="todo.complete")

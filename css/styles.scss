@@ -10,10 +10,14 @@ $primaryText: #212121;
 $secondaryText: #727272;
 $divider: #b6b6b6;
 
+//Element variables
+$footerHeight: 60px;
+
 //General Styles
 html {
   box-sizing: border-box;
   font-family: Roboto;
+  height: 100%;
 }
 *,
 *:before,
@@ -23,6 +27,7 @@ html {
 body {
   background: $darkPrimary !important;
   color: $primaryText !important;
+  height: 100%;
 }
 header {
   display: block;
@@ -30,8 +35,13 @@ header {
 a {
   color: $accent;
 }
+#wrap {
+  min-height: 100%;
+}
 .main {
   margin-top: 51px;
+  overflow: auto;
+  padding-bottom: $footerHeight;
 }
 .left {
   float: left;
@@ -42,9 +52,10 @@ a {
 
 //Footer styles
 .footer {
-  bottom: 0;
-  width: 100%;
-  height: 60px;
+  position: relative;
+  margin-top: -$footerHeight;
+  height: $footerHeight;
+  clear: both;
   background: #f8f8f8;
   border: #e7e7e7;
   .container {
@@ -207,9 +218,6 @@ a {
     color: $primaryText;
     .todo-checked {
       display: none;
-    }
-    .todo-text {
-      margin-left: 10px;
     }
     .done-true {
       text-decoration: line-through;
