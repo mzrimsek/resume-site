@@ -3,13 +3,15 @@ div.main(ng-controller="TodoController" id="todo")
     div.container
       h1 Simple Todo App
   div.container
-    h2.item-counter {{getTotalItems()}} Things Todo
-    form
-      input(type="text" placeholder="What do I need to do..." ng-model="newTodoText" ng-model-instant)
-      button(ng-click="addNewItem()") Add
-    button(ng-click="clearCompleted()") Clear Completed
+    h2.item-counter.text-center {{getTotalItems()}} Things Todo
+    div.row
+      form.todo-add.input-group
+        input.form-control(type="text" placeholder="What do I need to do..." ng-model="newTodoText" ng-model-instant)
+        span.input-group-btn
+          button.btn.btn-default(type="button" ng-click="addNewItem()") Add
     ul.todo-list.list-group
       li.todo-item.list-group-item(ng-repeat="item in todoItems")
         input.todo-checked(type="checkbox" ng-model="todo.complete")
         span.todo-text(class="done-{{todo.complete}}") {{item.action}}
+    button.todo-clear(type="button" ng-click="clearCompleted()") Clear Completed
     

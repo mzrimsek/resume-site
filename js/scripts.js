@@ -29,6 +29,18 @@ $(document).ready(function() {
   $(window).scroll(function() {
     fadeIn('#resume .section');
   });
+
+  //emulate todo add button click on pressing enter button when todo-add input has focus
+  $('.todo-add input').on('keyup', function(e) {
+    if (e.keyCode === 13) {
+      $('.todo-add button').click();
+    }
+  });
+
+  //click on todo-item text also toggles checkbox state that item
+  $('.todo-item').on('click', function(){
+    $(this).children('.todo-checked').click();
+  });
 });
 
 /**
