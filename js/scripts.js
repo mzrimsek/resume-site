@@ -38,7 +38,7 @@ $(document).ready(function() {
   });
 
   //click on todo-item text also toggles checkbox state that item
-  $('.todo-item').on('click', function(){
+  $(document).on('click', '.todo-item', function(){
     $(this).children('.todo-checked').click();
   });
 });
