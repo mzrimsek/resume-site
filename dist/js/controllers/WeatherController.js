@@ -1,0 +1,1 @@
+app.controller("WeatherController",["$scope","$http",function(e,t){var r="6fde0a22cc0a46f307fcd213ec2ff92c";e.currentWeather={},e.weatherForecast={},e.getWeatherData=function(){e.zipcode&&t({method:"GET",url:"http://api.openweathermap.org/data/2.5/weather?zip="+e.zipcode+",US&APPID="+r+"&units=imperial"}).success(function(t){e.currentWeather=t})}}]);

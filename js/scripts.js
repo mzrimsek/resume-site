@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('#resume').show(); //resume page shown by default
   $('#todo').hide();
+  $('#weather').hide();
 
   //nav bar functionality
   $('.nav a').on('click', function() {
@@ -9,11 +10,11 @@ $(document).ready(function() {
     $currentNav.addClass('active');
     var $currentId = $currentNav.attr('id');
     if ($currentId === 'homeNav') {
-      $('#resume').show();
-      $('#todo').hide();
+      showSelectedNav('resume');
     } else if ($currentId === 'todoNav') {
-      $('#resume').hide();
-      $('#todo').show();
+      showSelectedNav('todo');
+    } else if ($currentId === 'weatherNav') {
+      showSelectedNav('weather');
     }
   });
 
@@ -30,15 +31,15 @@ $(document).ready(function() {
     fadeIn('#resume .section');
   });
 
-  //emulate todo add button click on pressing enter button when todo-add input has focus
-  $('.todo-add input').on('keyup', function(e) {
+  //emulate button click on enter key press when input group input has focus
+  $('.input-group input').on('keyup', function(e) {
     if (e.keyCode === 13) {
-      $('.todo-add button').click();
+      $('.input-group button').click();
     }
   });
 
   //click on todo-item to toggle item state
-  $(document).on('click', '.todo-item', function(){
+  $(document).on('click', '.todo-item', function() {
     $(this).children('.todo-checked').click();
   });
 });
@@ -67,4 +68,13 @@ function fadeIn(elements) {
       }, 300);
     }
   });
+}
+
+/**
+ * Simple function to show only selected main element and hide rest
+ * @param  {String} navId Id of element to show - do not include # in parameter
+ */
+function showSelectedNav(navId) {
+  $('.main').hide();
+  $('#' + navId).show();
 }

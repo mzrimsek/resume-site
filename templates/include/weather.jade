@@ -1,0 +1,15 @@
+div.main(ng-controller="WeatherController" id="weather")
+  header.header
+    div.container
+      h1 Weather Forecast!
+      
+  div.container
+    div.row
+      form.weather-query.input-group
+        input.form-control(type="text" placeholder="Enter Zipcode" ng-model="zipcode" ng-model-instant)
+        span.input-group-btn
+          button.btn.btn-default(type="button" ng-click="getWeatherData()") Get Weather
+          
+  div.container.current-weather
+    div City: {{currentWeather.name}}
+    div Current Temp: {{currentWeather.main.temp | number:0}}&deg;

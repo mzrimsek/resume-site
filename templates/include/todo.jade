@@ -2,6 +2,7 @@ div.main(ng-controller="TodoController" id="todo")
   header.header
     div.container
       h1 Simple Todo App
+      
   div.container
     h2.item-counter.text-center {{getTotalItems()}} Things Todo
     div.row
@@ -13,5 +14,5 @@ div.main(ng-controller="TodoController" id="todo")
       li.todo-item.list-group-item(ng-repeat="item in todoItems")
         input.todo-checked(type="checkbox" ng-model="todo.complete")
         span.todo-text(class="done-{{todo.complete}}") {{item.action}}
-    button.todo-clear.btn.btn-default(type="button" ng-click="clearCompleted()") Clear Completed
+    //button.todo-clear.btn.btn-default(type="button" ng-click="clearCompleted()") Clear Completed
     
