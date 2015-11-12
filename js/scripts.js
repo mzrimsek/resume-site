@@ -42,6 +42,25 @@ $(document).ready(function() {
   $(document).on('click', '.todo-item', function() {
     $(this).children('.todo-checked').click();
   });
+
+  //set button to be disabled when page loads
+  //$('.weather-query button').prop('disabled', true);
+
+  //toggle whether submit button is enabled based on text input
+  $('.weather-query input').on('input', function() {
+    if (isValidZip($(this).val())) {
+      $('.weather-query button').prop('disabled', false);
+    } else {
+      $('.weather-query button').prop('disabled', true);
+    }
+  });
+
+  //reset text and disable submit button after it has been clicked
+  $('.weather-query button').on('click', function(){
+    var $weatherInput = $('.weather-query input');
+    $weatherInput.val('');
+    $(this).prop('disabled', true);
+  });
 });
 
 /**
@@ -57,7 +76,8 @@ function isVisible(element) {
 }
 
 /**
- * Fades all not visible elements in when they become visible on the screen.  Elements need to have 'opacity: 0' for any change to be seen.
+ * Fades all not visible elements in when they become visible on the screen.
+ * Elements need to have 'opacity: 0' for any change to be seen.
  * @param  {String} elements Selector for all elements to be checked to be faded in.
  */
 function fadeIn(elements) {
@@ -77,4 +97,13 @@ function fadeIn(elements) {
 function showSelectedNav(navId) {
   $('.main').hide();
   $('#' + navId).show();
+}
+
+/**
+ * Tests if input is a valid US zipcode
+ * @param  {[type]}  zip Zipcode to test
+ * @return {Boolean}      Return true if valid zipcode
+ */
+function isValidZip(zip) {
+  return (/^\d{5}(-\d{4})?$/).test(zip);
 }

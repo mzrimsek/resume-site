@@ -137,7 +137,7 @@ a {
 }
 .sections-wrapper {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 .experience {
   .item {
@@ -237,6 +237,20 @@ a {
 }
 
 //Weather Styles
-.weather-query{
-  margin-top:30px;
+#weather{
+  .sections-wrapper{
+    padding-top:30px;
+  }
+}
+.weather-query {
+  margin-top: 30px;
+  @extend .todo-add
+}
+.city-name{
+  padding-left:15px;
+}
+.current-weather {
+  .weather {
+    text-transform: capitalize;
+  }
 }

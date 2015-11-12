@@ -108,7 +108,7 @@ a {
 
 .sections-wrapper {
   padding-top: 60px;
-  padding-bottom: 60px; }
+  padding-bottom: 30px; }
 
 .experience .item, .education .item {
   margin-bottom: 30px; }
@@ -171,12 +171,21 @@ a {
     .todo-list .todo-item :hover {
       cursor: pointer; }
 
-.todo-add {
+.todo-add, .weather-query {
   margin-left: 15px;
   margin-right: 15px; }
 
 .todo-clear {
   margin-bottom: 30px; }
 
+#weather .sections-wrapper {
+  padding-top: 30px; }
+
 .weather-query {
   margin-top: 30px; }
+
+.city-name {
+  padding-left: 15px; }
+
+.current-weather .weather {
+  text-transform: capitalize; }

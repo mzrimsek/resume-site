@@ -1,15 +1,23 @@
 div.main(ng-controller="WeatherController" id="weather")
   header.header
     div.container
-      h1 Weather Forecast!
+      h1 Weather Forecast
+        span.city-name(ng-show="contentLoaded") for {{location.placeName}}, {{location.adminName1}}
       
   div.container
     div.row
       form.weather-query.input-group
         input.form-control(type="text" placeholder="Enter Zipcode" ng-model="zipcode" ng-model-instant)
         span.input-group-btn
-          button.btn.btn-default(type="button" ng-click="getWeatherData()") Get Weather
+          button.btn.btn-default(type="button" disabled="{{zipcode === ''}}" ng-click="getWeatherData()") Get Weather
           
-  div.container.current-weather
-    div City: {{currentWeather.name}}
-    div Current Temp: {{currentWeather.main.temp | number:0}}&deg;
+  div.container.sections-wrapper
+    div.row
+      
+      div.col-md-12.col-sm-12.col-xs-12
+        section.current-weather.section
+          div.section-inner
+            h2.heading Current Weather
+            div(ng-show="contentLoaded")
+              div.temperature Temperature: {{currentWeather.main.temp | number:0}}&deg;
+              div.weather Weather: {{currentWeather.weather[0].description}}
