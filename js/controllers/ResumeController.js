@@ -48,7 +48,9 @@ app.controller('ResumeController', ['$scope', function($scope) {
     new Technology('Bootstrap', 'http://getbootstrap.com/'),
     new Technology('jQuery', 'https://jquery.com/'),
     new Technology('AngularJS', 'https://angularjs.org/'),
-    new Technology('Github Pages', 'https://pages.github.com/')
+    new Technology('Github Pages', 'https://pages.github.com/'),
+    new Technology('OpenWeatherMap', 'http://openweathermap.org/'),
+    new Technology('GeoNames', 'http://www.geonames.org/')
   ];
 }]);
 

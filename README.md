@@ -13,6 +13,8 @@ mzrimsek.github.io
 * jQuery
 * AngularJS
 * [GitHub Pages](http://pages.github.com/)
+* OpenWeatherMap
+* GeoNames
 
 ## TODO
 * New profile picture
