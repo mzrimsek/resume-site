@@ -12,6 +12,7 @@ mzrimsek.github.io
 * Bootstrap
 * jQuery
 * AngularJS
+* Underscore
 * [GitHub Pages](http://pages.github.com/)
 * OpenWeatherMap
 * GeoNames

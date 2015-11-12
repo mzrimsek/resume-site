@@ -12,7 +12,7 @@ div.main(ng-controller="TodoController" id="todo")
           button.btn.btn-default(type="button" ng-click="addItem()") Add
     ul.todo-list.list-group
       li.todo-item.list-group-item(ng-repeat="item in todoItems")
-        input.todo-checked(type="checkbox" ng-model="todo.complete")
+        input.todo-checked(type="checkbox" ng-model="todo.complete" ng-click="completeItem($index)")
         span.todo-text(class="done-{{todo.complete}}") {{item.action}}
     button.todo-clear.btn.btn-default(type="button" ng-click="clearCompleted()") Clear Completed
     

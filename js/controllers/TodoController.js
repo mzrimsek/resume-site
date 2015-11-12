@@ -19,11 +19,15 @@ app.controller('TodoController', ['$scope', function($scope) {
       $scope.newTodoText = ''; //reset input field after item has been added
     }
   };
+  //toggle item completion state
+  $scope.completeItem = function(index) {
+    $scope.todoItems[index].complete = !$scope.todoItems[index].complete;
+  };
   //remove all items marked as complete from list
   $scope.clearCompleted = function() {
-    var filteredItems = [];
-
-    $scope.todoItems = filteredItems;
+    $scope.todoItems = _.filter($scope.todoItems, function(item){
+      return !item.complete;
+    });
   };
 }]);
 
