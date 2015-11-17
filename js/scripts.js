@@ -1,3 +1,5 @@
+var blockspringKey = 'b5b67b14cd8b36ece164248afcc23380';
+
 $(document).ready(function() {
   $('#resume').show(); //resume page shown by default
   $('#todo').hide();
@@ -43,9 +45,6 @@ $(document).ready(function() {
     $(this).children('.todo-checked').click();
   });
 
-  //set button to be disabled when page loads
-  //$('.weather-query button').prop('disabled', true);
-
   //toggle whether submit button is enabled based on text input
   $('.weather-query input').on('input', function() {
     if (isValidZip($(this).val())) {
@@ -56,7 +55,7 @@ $(document).ready(function() {
   });
 
   //reset text and disable submit button after it has been clicked
-  $('.weather-query button').on('click', function(){
+  $('.weather-query button').on('click', function() {
     var $weatherInput = $('.weather-query input');
     $weatherInput.val('');
     $(this).prop('disabled', true);
