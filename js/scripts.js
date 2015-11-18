@@ -7,6 +7,7 @@ $(document).ready(function() {
     $('.nav').find('.active').removeClass('active');
     var $currentNav = $(this).parent();
     $currentNav.addClass('active');
+    $('.navbar-collapse').collapse('hide');
   });
 
   //when the hash changes in the URL, disply that section of the site
