@@ -24,7 +24,7 @@ a {
   min-height: 100%; }
 
 .main {
-  margin-top: 51px;
+  padding-top: 51px;
   overflow: auto;
   padding-bottom: 60px; }
 
