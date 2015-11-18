@@ -1,23 +1,16 @@
-var blockspringKey = 'b5b67b14cd8b36ece164248afcc23380';
-
 $(document).ready(function() {
-  $('#resume').show(); //resume page shown by default
-  $('#todo').hide();
-  $('#weather').hide();
+  determineNavToShow();
 
-  //nav bar functionality
+  //update nav bar styles to highlight selected section
   $('.nav a').on('click', function() {
     $('.nav').find('.active').removeClass('active');
     var $currentNav = $(this).parent();
     $currentNav.addClass('active');
-    var $currentId = $currentNav.attr('id');
-    if ($currentId === 'homeNav') {
-      showSelectedNav('resume');
-    } else if ($currentId === 'todoNav') {
-      showSelectedNav('todo');
-    } else if ($currentId === 'weatherNav') {
-      showSelectedNav('weather');
-    }
+  });
+
+  //when the hash changes in the URL, disply that section of the site
+  $(window).on('hashchange', function() {
+    determineNavToShow();
   });
 
   //initially set all elements to faded out
@@ -88,14 +81,25 @@ function fadeIn(elements) {
     }
   });
 }
-
 /**
- * Simple function to show only selected main element and hide rest
- * @param  {String} navId Id of element to show - do not include # in parameter
+ * Determines which section to show based on hash in URL, and then updates
+ * front end nav to
  */
-function showSelectedNav(navId) {
+function determineNavToShow() {
+  var hash = window.location.hash.substring(1);
+  //if no hash in the URL, set it to the resume section
+  if (!hash) {
+    hash = 'resume';
+    window.location.href = window.location.href + '#' + hash;
+  }
+  //hide all main sections and show only the selected one
   $('.main').hide();
-  $('#' + navId).show();
+  $('#' + hash).show();
+  //update nav styling based on selected nav
+  //needed because when navigating by URL instead of nav buttons, the styling doesn't change correctly
+  $('.nav').find('.active').removeClass('active');
+  var $currentNav = $('.nav').children('#' + hash + 'Nav');
+  $currentNav.addClass('active');
 }
 
 /**
