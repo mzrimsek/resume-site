@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  //redirect to section specified by URL
   determineNavToShow();
 
   //update nav bar styles to highlight selected section
@@ -83,7 +84,7 @@ function fadeIn(elements) {
 }
 /**
  * Determines which section to show based on hash in URL, and then updates
- * front end nav to
+ * front end nav to.  If no hash is given, it adds the hash for the resume section.
  */
 function determineNavToShow() {
   var hash = window.location.hash.substring(1);
