@@ -190,6 +190,5 @@ a {
 .weather-desc {
   text-transform: capitalize; }
 
-@media (max-width: 767px) {
-  .reports {
-    margin-bottom: 15px; } }
+.reports {
+  margin-bottom: 15px; }

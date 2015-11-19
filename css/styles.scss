@@ -249,11 +249,9 @@ a {
 .city-name {
   padding-left: 12px;
 }
-.weather-desc{
-  text-transform:capitalize;
+.weather-desc {
+  text-transform: capitalize;
 }
-.reports{
-  @media(max-width: 767px) {
-    margin-bottom:15px;
-  }
+.reports {
+  margin-bottom: 15px;
 }
