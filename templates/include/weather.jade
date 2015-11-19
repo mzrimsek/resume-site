@@ -1,7 +1,7 @@
 div.main(ng-controller="WeatherController" id="weather")
   header.header
     div.container
-      h1 Weather Forecast
+      h1 Weather Information
         span.city-name(ng-show="contentLoaded") for {{location.placeName}}, {{location.adminName1}}
       
   div.container
@@ -13,11 +13,22 @@ div.main(ng-controller="WeatherController" id="weather")
           
   div.container.sections-wrapper
     div.row
-      
+    
       div.col-md-12.col-sm-12.col-xs-12
         section.current-weather.section
           div.section-inner
             h2.heading Current Weather
             div(ng-show="contentLoaded")
               div.temperature Temperature: {{currentWeather.main.temp | number:0}}&deg;
-              div.weather Weather: {{currentWeather.weather[0].description}}
+              div.weather-desc Weather: {{currentWeather.weather[0].description}}
+              
+      div.col-md-12.col-sm-12.col-xs-12
+        section.weather-forecast.section
+          div.section-inner
+            h2.heading Weather Forecast
+            div.forecast-day.row(ng-repeat="day in weatherForecast")
+              h3.date {{day.date}}
+              div.reports.col-md-3.col-sm-4.col-xs-6(ng-repeat="report in day.reports")
+                div.time Time: {{report.dt_txt.substring(11)}}
+                div.temperature Temperature: {{report.main.temp}}&deg;
+                div.weather-desc Weather: {{report.weather[0].description}}

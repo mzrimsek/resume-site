@@ -247,10 +247,13 @@ a {
   @extend .todo-add;
 }
 .city-name {
-  padding-left: 15px;
+  padding-left: 12px;
 }
-.current-weather {
-  .weather {
-    text-transform: capitalize;
+.weather-desc{
+  text-transform:capitalize;
+}
+.reports{
+  @media(max-width: 767px) {
+    margin-bottom:15px;
   }
 }

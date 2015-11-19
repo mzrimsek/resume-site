@@ -18,7 +18,13 @@ app.controller('WeatherController', ['$scope', '$http', function($scope, $http) 
           method: 'GET',
           url: 'http://api.openweathermap.org/data/2.5/forecast?id=' + $scope.currentWeather.id + ',US&APPID=' + apiKey + '&units=imperial'
         }).success(function(response) {
-          $scope.weatherForecast = response;
+          var days = new Array(5);
+          for(var i = 0; i < 5; i++){
+            var date = response.list[0].dt_txt.substring(0, 10);
+            var reports = response.list.splice(0, 8); //8 because forecasts for each day are generated every 3 hours
+            days[i] = new Day(date, reports);
+          }
+          $scope.weatherForecast = days;
           //console.log($scope.weatherForecast);
         });
       });
@@ -34,5 +40,14 @@ app.controller('WeatherController', ['$scope', '$http', function($scope, $http) 
       });
     }
   };
-
 }]);
+
+/**
+ * Constructor for new Day object
+ * @param {String} date    Date of the day
+ * @param {Array} reports List of weather reports for the day.
+ */
+function Day(date, reports){
+  this.date = date;
+  this.reports = reports;
+}

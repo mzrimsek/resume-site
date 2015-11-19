@@ -185,7 +185,11 @@ a {
   margin-top: 30px; }
 
 .city-name {
-  padding-left: 15px; }
+  padding-left: 12px; }
 
-.current-weather .weather {
+.weather-desc {
   text-transform: capitalize; }
+
+@media (max-width: 767px) {
+  .reports {
+    margin-bottom: 15px; } }
