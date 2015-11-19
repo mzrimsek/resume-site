@@ -16,13 +16,14 @@ app.controller('WeatherController', ['$scope', '$http', function($scope, $http) 
 
         $http({
           method: 'GET',
-          url: 'http://api.openweathermap.org/data/2.5/forecast?id=' + $scope.currentWeather.id + ',US&APPID=' + apiKey + '&units=imperial'
+          url: 'http://api.openweathermap.org/data/2.5/forecast/daily?id=' + $scope.currentWeather.id + ',US&APPID=' + apiKey + '&cnt=8&units=imperial'
         }).success(function(response) {
-          var days = new Array(5);
-          for(var i = 0; i < 5; i++){
-            var date = response.list[0].dt_txt.substring(0, 10);
-            var reports = response.list.splice(0, 8); //8 because forecasts for each day are generated every 3 hours
-            days[i] = new Day(date, reports);
+          var currentDate = new Date();
+          var days = new Array(response.list.length);
+          for (var i = 0; i < days.length; i++) {
+            var forecastDate = currentDate.setDate(currentDate.getDate() + 1);
+            days[i] = new Day(forecastDate, response.list[i]);
+            currentDate = new Date(forecastDate);
           }
           $scope.weatherForecast = days;
           //console.log($scope.weatherForecast);
@@ -33,8 +34,7 @@ app.controller('WeatherController', ['$scope', '$http', function($scope, $http) 
         method: 'GET',
         url: 'http://api.geonames.org/postalCodeSearchJSON?postalcode=' + $scope.zipcode + '&country=US&username=mzrimsek'
       }).success(function(response) {
-        var res = response;
-        $scope.location = res.postalCodes[0];
+        $scope.location = response.postalCodes[0];
         $scope.contentLoaded = true;
         //console.log($scope.location);
       });
@@ -44,10 +44,10 @@ app.controller('WeatherController', ['$scope', '$http', function($scope, $http) 
 
 /**
  * Constructor for new Day object
- * @param {String} date    Date of the day
- * @param {Array} reports List of weather reports for the day.
+ * @param {String} date    Representation of date of the day
+ * @param {Object} reports Object containing weather data returned from API call
  */
-function Day(date, reports){
+function Day(date, report) {
   this.date = date;
-  this.reports = reports;
+  this.report = report;
 }

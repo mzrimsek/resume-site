@@ -26,9 +26,13 @@ div.main(ng-controller="WeatherController" id="weather")
         section.weather-forecast.section
           div.section-inner
             h2.heading Weather Forecast
-            div.forecast-day.row(ng-repeat="day in weatherForecast")
-              h3.date {{day.date}}
-              div.reports.col-md-3.col-sm-4.col-xs-6(ng-repeat="report in day.reports")
-                div.time Time: {{report.dt_txt.substring(11)}}
-                div.temperature Temperature: {{report.main.temp | number:0}}&deg;
-                div.weather-desc Weather: {{report.weather[0].description}}
+            div.row
+              div.forecast-day.col-md-3.col-sm-4.col-xs-6(ng-repeat="day in weatherForecast")
+                h3.date {{day.date | date: 'shortDate'}}
+                div.report
+                  div Temperatures:
+                  ul.temperatures
+                    li.day Day: {{day.report.temp.day | number:0}}&deg;
+                    li.min Min: {{day.report.temp.min | number:0}}&deg;
+                    li.max Max: {{day.report.temp.max | number:0}}&deg;
+                  div.weather-desc Weather: {{day.report.weather[0].description}}
