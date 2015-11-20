@@ -28,7 +28,7 @@ div.main(ng-controller="WeatherController" id="weather")
             h2.heading Weather Forecast
             div.row
               div.forecast-day.col-md-3.col-sm-4.col-xs-6(ng-repeat="day in weatherForecast")
-                h3.date {{day.date | date: 'shortDate'}}
+                h3.date {{day.date | date: 'EEE, MM/dd/yyyy'}}
                 div.report
                   div Temperatures:
                   ul.temperatures

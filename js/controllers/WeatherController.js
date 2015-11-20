@@ -21,9 +21,8 @@ app.controller('WeatherController', ['$scope', '$http', function($scope, $http) 
           var currentDate = new Date();
           var days = new Array(response.list.length);
           for (var i = 0; i < days.length; i++) {
-            var forecastDate = currentDate.setDate(currentDate.getDate() + 1);
-            days[i] = new Day(forecastDate, response.list[i]);
-            currentDate = new Date(forecastDate);
+            days[i] = new Day(currentDate.getTime(), response.list[i]);
+            currentDate = new Date(currentDate.setDate(currentDate.getDate() + 1));
           }
           $scope.weatherForecast = days;
           //console.log($scope.weatherForecast);
