@@ -14,7 +14,7 @@ app.controller('TodoController', ['$scope', function($scope) {
   //add new item to list
   $scope.addItem = function() {
     //don't want to add blank items
-    if($scope.newTodoText){
+    if ($scope.newTodoText) {
       $scope.todoItems.push(new TodoItem($scope.newTodoText, false));
       $scope.newTodoText = ''; //reset input field after item has been added
     }
@@ -25,7 +25,7 @@ app.controller('TodoController', ['$scope', function($scope) {
   };
   //remove all items marked as complete from list
   $scope.clearCompleted = function() {
-    $scope.todoItems = _.filter($scope.todoItems, function(item){
+    $scope.todoItems = _.filter($scope.todoItems, function(item) {
       return !item.complete;
     });
   };

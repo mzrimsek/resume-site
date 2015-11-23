@@ -5,7 +5,7 @@ app.controller('WeatherController', ['$scope', '$http', function($scope, $http) 
   $scope.currentWeather = {};
   $scope.weatherForecast = {};
   $scope.location = {};
-
+  //execute API calls to get all needed weather data
   $scope.getWeatherData = function() {
     if ($scope.zipcode) {
       $http({
@@ -40,7 +40,7 @@ app.controller('WeatherController', ['$scope', '$http', function($scope, $http) 
       });
     }
   };
-
+  //Processes weather icon id to determine which weather icon to display
   $scope.getWeatherIcon = function(weatherId) {
     return 'http://openweathermap.org/img/w/' + weatherId + '.png';
   };
