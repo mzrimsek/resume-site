@@ -43,7 +43,7 @@ gulp.task('watch', function() {
   gulp.watch(gulpWatchList, ['build']);
 });
 
-gulp.task('serve', ['watch'], serve({
+gulp.task('serve', ['build', 'watch'], serve({
   root: ['dist'],
   port: 3000
 }));
