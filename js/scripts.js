@@ -7,7 +7,10 @@ $(document).ready(function() {
     $('.nav').find('.active').removeClass('active');
     var $currentNav = $(this).parent();
     $currentNav.addClass('active');
-    $('.navbar-collapse').collapse('hide');
+    //hide mobile nav after selection, but not if the event was triggered on a parent dropdown menu item
+    if (!$(this).hasClass('dropdown-toggle')) {
+      $('.navbar-collapse').collapse('hide');
+    }
   });
 
   //when the hash changes in the URL, disply that section of the site
@@ -103,7 +106,6 @@ function determineNavToShow() {
   var $currentNav = $('.nav').children('#' + hash + 'Nav');
   $currentNav.addClass('active');
 }
-
 /**
  * Tests if input is a valid US zipcode
  * @param  {[type]}  zip Zipcode to test
