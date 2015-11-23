@@ -184,11 +184,8 @@ a {
 .weather-query {
   margin-top: 30px; }
 
-.city-name {
-  padding-left: 12px; }
-
 .weather-desc {
   text-transform: capitalize; }
 
-.reports {
-  margin-bottom: 15px; }
+.weather-forecast .forecast-day .icon {
+  margin-top: 25px; }

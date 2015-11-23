@@ -39,6 +39,10 @@ app.controller('WeatherController', ['$scope', '$http', function($scope, $http) 
       });
     }
   };
+
+  $scope.getWeatherIcon = function(weatherId){
+    return 'http://openweathermap.org/img/w/'+weatherId+'.png';
+  };
 }]);
 
 /**

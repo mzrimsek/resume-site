@@ -18,9 +18,11 @@ div.main(ng-controller="WeatherController" id="weather")
         section.current-weather.section
           div.section-inner
             h2.heading Current Weather
-            div(ng-show="contentLoaded")
-              div.temperature Temperature: {{currentWeather.main.temp | number:0}}&deg;
-              div.weather-desc Weather: {{currentWeather.weather[0].description}}
+            div.clearfix(ng-show="contentLoaded")
+              div.left
+                div.temperature Temperature: {{currentWeather.main.temp | number:0}}&deg;
+                div.weather-desc Weather: {{currentWeather.weather[0].description}}
+              img.icon.right(ng-src="{{getWeatherIcon(currentWeather.weather[0].icon)}}")
               
       div.col-md-12.col-sm-12.col-xs-12
         section.weather-forecast.section
@@ -29,10 +31,12 @@ div.main(ng-controller="WeatherController" id="weather")
             div.row
               div.forecast-day.col-md-3.col-sm-4.col-xs-6(ng-repeat="day in weatherForecast")
                 h3.date {{day.date | date: 'EEE, MM/dd/yyyy'}}
-                div.report
-                  div Temperatures:
-                  ul.temperatures
-                    li.day Day: {{day.report.temp.day | number:0}}&deg;
-                    li.min Min: {{day.report.temp.min | number:0}}&deg;
-                    li.max Max: {{day.report.temp.max | number:0}}&deg;
-                  div.weather-desc Weather: {{day.report.weather[0].description}}
+                div.report.clearfix
+                  div.left
+                    div Temperatures:
+                    ul.temperatures
+                      li.day Day: {{day.report.temp.day | number:0}}&deg;
+                      li.min Min: {{day.report.temp.min | number:0}}&deg;
+                      li.max Max: {{day.report.temp.max | number:0}}&deg;
+                    div.weather-desc Weather: {{day.report.weather[0].description}}
+                  img.icon.right(ng-src="{{getWeatherIcon(day.report.weather[0].icon)}}")
