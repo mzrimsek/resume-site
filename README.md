@@ -17,10 +17,6 @@ mzrimsek.github.io
 * OpenWeatherMap
 * GeoNames
 
-## TODO
-* New profile picture
-* Some other cool stuff
-
 ## Notes
 * The site works by redirecting from a dummy index.html in the root of the repo to the dist subfolder where the real project root is.
 * Normally I would just commit these files, but for the intent of showing off SASS/Jade/Gulp usage, all files that are used for local development are committed, not just the results of their compilation.
