@@ -1,6 +1,5 @@
 app.controller('TodoController', ['$scope', function($scope) {
   $scope.todoItems = [
-    new TodoItem('New Profile Picture', false),
     new TodoItem('Make New Cool Angular Stuff', false),
     new TodoItem('Set Up New Hosting Environment', false),
     new TodoItem('Set Up Web Server for Application Backend', false),
