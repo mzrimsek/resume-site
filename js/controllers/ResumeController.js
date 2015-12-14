@@ -14,6 +14,9 @@ app.controller('ResumeController', ['$scope', function($scope) {
     google_plus: 'https://plus.google.com/+MikeZrimsek'
   };
   $scope.jobs = [
+    new Job('Kent State University Network Services', 'OH', 'Software Engineer', 'December 2015', 'Present', '', '', [
+      //new Project('', '')
+    ]),
     new Job('Verys', 'CA', 'Junior Web Software Engineer', 'January 2014', 'Present', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recently recognized as one of the fastest growing companies in Orange County, CA.  I worked on several projects, but have presented the most notable ones below.', [
       new Project('TheRoadmap', 'A financial planner website originally built on a LAMP stack, but then rewritten in Java.  The application utilized the Spring framework using Thymeleaf as the templating engine, built with Gradle, running on a Tomcat server.  My duties on this project consisted of porting the codebase from PHP to Java, development and testing of new and existing features, server maintenance, and codebase upkeep.'),
       new Project('Parcel Pending', 'An electronic locker system used in apartment complex for easy, centralized package delivery.  My duties on this project revolved around doing extensive testing of both the website and the API developed for accessing information about the lockers.  Formulated thorough test cases to aid in regression testing that was required during each project sprint.')
@@ -33,7 +36,8 @@ app.controller('ResumeController', ['$scope', function($scope) {
       new Skill('Django', 30),
       new Skill('PHP', 30),
       new Skill('Node.js', 30),
-      new Skill('AngularJS', 65)
+      new Skill('AngularJS', 65),
+      new Skill('React', 25)
     ]
   };
   $scope.schools = [
