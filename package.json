@@ -1,22 +1,32 @@
 {
-  "name": "mzrimsek.github.io",
+  "name": "resume_site",
   "version": "1.0.0",
-  "description": "Personal website for Michael Zrimsek",
-  "dependencies": {
-    "gulp-jade": "^1.1.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sass": "^2.1.0",
-    "gulp-uglify": "^1.4.2",
-    "gulp-serve": "^1.2.0"
+  "description": "Mike Zrimsek resume site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mzrimsek/mzrimsek.github.io.git"
+    "url": "git+https://github.com/mzrimsek/resume_site.git"
   },
   "author": "Mike Zrimsek",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mzrimsek/mzrimsek.github.io/issues"
+    "url": "https://github.com/mzrimsek/resume_site/issues"
   },
-  "homepage": "https://github.com/mzrimsek/mzrimsek.github.io#readme",
-  "license": "MIT"
+  "homepage": "https://github.com/mzrimsek/resume_site#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-serve": "^1.2.0",
+    "gulp-uglify": "^1.5.1"
+  }
 }

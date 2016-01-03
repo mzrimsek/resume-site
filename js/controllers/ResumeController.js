@@ -45,18 +45,6 @@ app.controller('ResumeController', ['$scope', function($scope) {
     new School('Irvine Valley College', 'CA', 'Computer Science', 'September 2012', 'May 2015'),
     new School('Cal Poly Pomona', 'CA', 'Computer Science', 'September 2011', 'May 2012')
   ];
-  $scope.technologies = [
-    new Technology('Jade', 'http://jade-lang.com/'),
-    new Technology('SASS', 'http://sass-lang.com/'),
-    new Technology('Gulp', 'http://gulpjs.com/'),
-    new Technology('Bootstrap', 'http://getbootstrap.com/'),
-    new Technology('jQuery', 'https://jquery.com/'),
-    new Technology('AngularJS', 'https://angularjs.org/'),
-    new Technology('Underscore', 'http://underscorejs.org/'),
-    new Technology('Github Pages', 'https://pages.github.com/'),
-    new Technology('OpenWeatherMap', 'http://openweathermap.org/'),
-    new Technology('GeoNames', 'http://www.geonames.org/')
-  ];
 }]);
 
 /**
@@ -140,14 +128,4 @@ function School(name, location, major, startDate, endDate) {
   this.major = major;
   this.startDate = startDate;
   this.endDate = endDate;
-}
-
-/**
- * Constructor for new Technology object
- * @param {String} name Name of technology
- * @param {String} url  URL to find more information about technology at
- */
-function Technology(name, url){
-  this.name = name;
-  this.url = url;
 }

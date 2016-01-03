@@ -9,7 +9,7 @@ var gulpWatchList = ['templates/*jade', 'templates/**/*.jade', 'css/*.scss', 'js
 
 gulp.task('templates', function() {
   return gulp.src('templates/*.jade')
-    .pipe(jade())
+    .pipe(jade({'pretty':true}))
     .pipe(gulp.dest('dist'));
 });
 

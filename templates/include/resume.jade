@@ -89,12 +89,3 @@ div.main(ng-controller="ResumeController" id="resume")
                     span.level-label.right {{lang.level}}
                   div.level-bar
                     div.level-bar-inner(style="width:{{lang.perc}}%;")
-        
-        aside.technologies.aside.section
-          div.section-inner
-            h2.heading Built With
-            div.content
-              ul.list-unstyled
-                li(ng-repeat="tech in technologies")
-                  i.fa.fa-wrench
-                  a.technology(ng-href="{{tech.url}}" target="_blank") {{tech.name}}
