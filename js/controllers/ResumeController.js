@@ -36,7 +36,7 @@ app.controller('ResumeController', ['$scope', function($scope) {
       new Skill('Django', 30),
       new Skill('PHP', 30),
       new Skill('Node.js', 30),
-      new Skill('AngularJS', 65),
+      new Skill('AngularJS', 60),
       new Skill('React', 25)
     ]
   };
