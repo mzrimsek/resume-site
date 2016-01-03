@@ -9,9 +9,6 @@ This is my resume site found at [zrimsek.com](http://zrimsek.com).
 * Bootstrap
 * jQuery
 * AngularJS
-* Underscore
-* OpenWeatherMap
-* GeoNames
 
 ## Contact
 #### Developer
