@@ -8,12 +8,9 @@ html(lang="en")
     div(id="wrapper")
       include ./include/nav.jade
       include ./include/resume.jade
-    
-    footer.footer
-      div.container
-        p.text-muted.right View project source at
-          a(href="https://github.com/mzrimsek/mzrimsek.github.io" target="_blank") mzrimsek.github.io
       
+    include ./include/footer.jade
+    
     //modules
     script(src="js/app.js")
     //controllers
