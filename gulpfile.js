@@ -3,7 +3,7 @@ var jade = require('gulp-jade');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
-var cssano = require('gulp-cssnano');
+var cssnano = require('gulp-cssnano');
 var serve = require('gulp-serve');
 
 var gulpWatchList = ['templates/*jade', 'templates/**/*.jade', 'css/*.scss', 'js/*.js', 'js/**/*.js'];
@@ -17,7 +17,6 @@ gulp.task('templates', function() {
 gulp.task('styles', function() {
   return gulp.src('css/*.scss')
     .pipe(sass())
-    .pipe(cssnano())
     .pipe(gulp.dest('dist'));
 });
 
