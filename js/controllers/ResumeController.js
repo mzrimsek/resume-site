@@ -25,19 +25,22 @@ app.controller('ResumeController', ['$scope', function($scope) {
   $scope.skills = {
     info: 'My goal is to constantly be learning something as there is always something new and exciting to try out in a project.  Below are the skills I have learned and honed through projects I have worked on both at work and in my spare time.',
     languages: [
-      new Skill('Java', 95),
-      new Skill('Spring', 75),
-      new Skill('C/C++', 55),
-      new Skill('C#', 60),
-      new Skill('Javascript/JQuery', 90),
-      new Skill('HTML5/CSS3', 90),
-      new Skill('MySQL', 60),
-      new Skill('Python', 50),
-      new Skill('Django', 30),
-      new Skill('PHP', 30),
-      new Skill('Node.js', 45),
-      new Skill('AngularJS', 60),
-      new Skill('React/Flux', 25)
+      new Language(new Skill('Java', 95), [
+        new Skill('Spring', 75)
+      ]),
+      new Language(new Skill('C/C++', 45), []),
+      new Language(new Skill('C#', 60), []),
+      new Language(new Skill('HTML5/CSS3', 80), []),
+      new Language(new Skill('Javascript/JQuery', 80), [
+        new Skill('Node', 45),
+        new Skill('Angular', 50),
+        new Skill('React/Flux', 25)
+      ]),
+      new Language(new Skill('MySQL', 60), []),
+      new Language(new Skill('Python', 50), [
+        new Skill('Django', 30)
+      ]),
+      new Language(new Skill('PHP', 30), [])
     ]
   };
   $scope.schools = [
@@ -46,6 +49,7 @@ app.controller('ResumeController', ['$scope', function($scope) {
     new School('Cal Poly Pomona', 'CA', 'Computer Science', 'September 2011', 'May 2012')
   ];
 }]);
+
 /**
  * Calculate current age based on current day of the year
  * @param  {Integer} birthMonth Number for month of birthday to check for (i.e. 3 for March, 12 for December, etc)
@@ -63,6 +67,7 @@ var calcAge = function(birthMonth, birthDay, birthYear) {
   }
   return age;
 };
+
 /**
  * Constructor for new Job object
  * @param {String} company   Name of company
@@ -93,7 +98,15 @@ function Project(name, desc) {
   this.name = name;
   this.desc = desc;
 }
-
+/**
+ * [Language description]
+ * @param {Skill} primary   The parent skill - usually the main language of the subskills.
+ * @param {Array} subskills List of child skills - usually frameworks, libraries, etc.
+ */
+function Language(primary, subskills) {
+  this.primary = primary;
+  this.subskills = subskills;
+}
 /**
  * Constructor for new Skill object
  * @param {String} name Name of skill
@@ -110,7 +123,6 @@ function Skill(name, perc) {
   this.perc = perc;
   this.level = setLevel(perc);
 }
-
 /**
  * Constructor for new School object
  * @param {String} name      Name of school

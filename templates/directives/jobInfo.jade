@@ -1,0 +1,10 @@
+h3.title {{info.title}} - 
+  span.place
+    a(ng-href="{{info.url}}" target="_blank") {{info.company}}
+    span , {{info.location}}
+  span.year ({{info.startDate}} - {{info.endDate}})
+p {{info.desc}}
+ul.projects
+  li.project(ng-repeat="project in info.projects")
+    h3.title {{project.name}}
+    p {{project.desc}}

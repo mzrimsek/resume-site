@@ -35,29 +35,14 @@ div.main(ng-controller="ResumeController" id="resume")
             h2.heading Work Experience
             div.content
               div.item(ng-repeat="job in jobs")
-                h3.title {{job.title}} - 
-                  span.place
-                    a(ng-href="{{job.url}}" target="_blank") {{job.company}}
-                    span , {{job.location}}
-                  span.year ({{job.startDate}} - {{job.endDate}})
-                p {{job.desc}}
-                ul.projects
-                  li.project(ng-repeat="project in job.projects")
-                    h3.title {{project.name}}
-                    p {{project.desc}}
+                job-info(info="job")
         
         section.education.section
           div.section-inner
             h2.heading Education
             div.content
               div.item(ng-repeat="school in schools")
-                h3.title
-                  i.fa.fa-graduation-cap
-                  span.place
-                    span {{school.name}}
-                    span , {{school.location}}
-                  span.year ({{school.startDate}} - {{school.endDate}})
-                p.major {{school.major}}
+                school-info(info="school")
       
       div.secondary.col-md-4.col-sm-12.col-xs-12
         aside.info.aside.section
@@ -84,8 +69,7 @@ div.main(ng-controller="ResumeController" id="resume")
             div.content
               p.intro {{skills.info}}
               div.skillset
-                div.item(ng-repeat="lang in skills.languages")
-                  h3.level-title {{lang.name}}
-                    span.level-label.right {{lang.level}}
-                  div.level-bar
-                    div.level-bar-inner(style="width:{{lang.perc}}%;")
+                div.item.clearfix(ng-repeat="lang in skills.languages")
+                  skill-info(info="lang.primary")
+                  div.subskill.right(ng-repeat="subskill in lang.subskills")
+                    skill-info(info="subskill")

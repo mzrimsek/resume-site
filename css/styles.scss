@@ -1,6 +1,5 @@
 //Imports
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-
 //Colors
 $darkPrimary: #1976d2;
 $primary: #2196f3;
@@ -9,10 +8,8 @@ $accent: #03a9f4;
 $primaryText: #212121;
 $secondaryText: #727272;
 $divider: #b6b6b6;
-
 //Element variables
 $footerHeight: 60px;
-
 //General Styles
 html {
   box-sizing: border-box;
@@ -49,7 +46,11 @@ a {
 .right {
   float: right;
 }
-
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 //Footer styles
 .footer {
   position: relative;
@@ -69,7 +70,6 @@ a {
     }
   }
 }
-
 //Resume Styles
 .header {
   padding: 30px 0;
@@ -185,23 +185,39 @@ a {
   .skillset {
     .item {
       margin-bottom: 30px;
-    }
-    .level-title {
-      font-size: 16px;
-      margin-top: 0;
-      position: relative;
-    }
-    .level-label {
-      font-size: 14px;
-      color: $secondaryText;
-    }
-    .level-bar {
-      height: 15px;
-      background: $divider;
-    }
-    .level-bar-inner {
-      height: 15px;
-      background: $accent;
+      .subskill {
+        margin-top: 10px;
+        width: 80%;
+        .level-title{
+          font-size:14px;
+        }
+        .level-label{
+          font-size:12px;
+        }
+        .level-bar{
+          height:13px;
+        }
+        .level-bar-inner{
+          height:13px;
+        }
+      }
+      .level-title {
+        font-size: 16px;
+        margin-top: 0;
+        position: relative;
+      }
+      .level-label {
+        font-size: 14px;
+        color: $secondaryText;
+      }
+      .level-bar {
+        height: 15px;
+        background: $divider;
+      }
+      .level-bar-inner {
+        height: 15px;
+        background: $accent;
+      }
     }
   }
 }
