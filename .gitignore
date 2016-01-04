@@ -1,0 +1,7 @@
+dist/
+node_modules/
+*.sh
+logs
+*.log
+npm-debug.log*
+.npm
