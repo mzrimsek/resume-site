@@ -1,8 +1,9 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
-var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 var cssnano = require('gulp-cssnano');
 var serve = require('gulp-serve');
 
@@ -10,13 +11,18 @@ var gulpWatchList = ['templates/*jade', 'templates/**/*.jade', 'css/*.scss', 'js
 
 gulp.task('templates', function() {
   return gulp.src('templates/*.jade')
-    .pipe(jade({'pretty':true}))
+    .pipe(jade())
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('styles', function() {
+  var processors = [
+    autoprefixer,
+    cssnano
+  ];
   return gulp.src('css/*.scss')
     .pipe(sass())
+    .pipe(postcss(processors))
     .pipe(gulp.dest('dist'));
 });
 
@@ -40,7 +46,7 @@ gulp.task('directives-js', function() {
 
 gulp.task('directives-jade', function() {
   return gulp.src('templates/directives/*.jade')
-  .pipe(jade({'pretty':true}))
+  .pipe(jade())
   .pipe(gulp.dest('dist/js/directives'));
 });
 
