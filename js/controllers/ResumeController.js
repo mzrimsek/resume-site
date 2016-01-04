@@ -14,10 +14,10 @@ app.controller('ResumeController', ['$scope', function($scope) {
     google_plus: 'https://plus.google.com/+MikeZrimsek'
   };
   $scope.jobs = [
-    new Job('Kent State University Network Services', 'OH', 'Software Engineer', 'December 2015', 'Present', '', '', [
+    new Job('Kent State University Residence Services', 'OH', 'Web Software Engineer', 'December 2015', 'Present', 'https://www.kent.edu/housing', '', [
       //new Project('', '')
     ]),
-    new Job('Verys', 'CA', 'Junior Web Software Engineer', 'January 2014', 'Present', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recently recognized as one of the fastest growing companies in Orange County, CA.  I worked on several projects, but have presented the most notable ones below.', [
+    new Job('Verys', 'CA', 'Junior Web Software Engineer', 'January 2014', 'September 2015', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recently recognized as one of the fastest growing companies in Orange County, CA.  I worked on several projects, but have presented the most notable ones below.', [
       new Project('TheRoadmap', 'A financial planner website originally built on a LAMP stack, but then rewritten in Java.  The application utilized the Spring framework using Thymeleaf as the templating engine, built with Gradle, running on a Tomcat server.  My duties on this project consisted of porting the codebase from PHP to Java, development and testing of new and existing features, server maintenance, and codebase upkeep.'),
       new Project('Parcel Pending', 'An electronic locker system used in apartment complex for easy, centralized package delivery.  My duties on this project revolved around doing extensive testing of both the website and the API developed for accessing information about the lockers.  Formulated thorough test cases to aid in regression testing that was required during each project sprint.')
     ])
@@ -46,7 +46,23 @@ app.controller('ResumeController', ['$scope', function($scope) {
     new School('Cal Poly Pomona', 'CA', 'Computer Science', 'September 2011', 'May 2012')
   ];
 }]);
-
+/**
+ * Calculate current age based on current day of the year
+ * @param  {Integer} birthMonth Number for month of birthday to check for (i.e. 3 for March, 12 for December, etc)
+ * @param  {[type]} birthDay   Number for day of month in birthday to check for
+ * @param  {[type]} birthYear  Four digit representation of year of birthday
+ * @return {Integer}            Current age based on entered birthday and current day of the year
+ */
+var calcAge = function(birthMonth, birthDay, birthYear) {
+  var today = new Date();
+  var age = today.getFullYear() - birthYear;
+  if (today.getMonth() < birthMonth - 1) {
+    age--;
+  } else if ((today.getMonth() === birthMonth - 1) && (today.getDay() < birthDay)) {
+    age--;
+  }
+  return age;
+};
 /**
  * Constructor for new Job object
  * @param {String} company   Name of company
@@ -68,25 +84,6 @@ function Job(company, location, title, startDate, endDate, url, desc, projects) 
   this.desc = desc;
   this.projects = projects;
 }
-
-/**
- * Calculate current age based on current day of the year
- * @param  {Integer} birthMonth Number for month of birthday to check for (i.e. 3 for March, 12 for December, etc)
- * @param  {[type]} birthDay   Number for day of month in birthday to check for
- * @param  {[type]} birthYear  Four digit representation of year of birthday
- * @return {Integer}            Current age based on entered birthday and current day of the year
- */
-var calcAge = function(birthMonth, birthDay, birthYear) {
-  var today = new Date();
-  var age = today.getFullYear() - birthYear;
-  if (today.getMonth() < birthMonth - 1) {
-    age--;
-  } else if ((today.getMonth() === birthMonth - 1) && (today.getDay() < birthDay)) {
-    age--;
-  }
-  return age;
-};
-
 /**
  * Constructor for new Project Object
  * @param {String} name Name of project
