@@ -1,0 +1,18 @@
+.footer {
+  position: relative;
+  margin-top: -$footerHeight;
+  height: $footerHeight;
+  clear: both;
+  background: #f8f8f8;
+  border: #e7e7e7;
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    .text-muted {
+      margin: 20px 0;
+      a {
+        padding-left: 5px;
+      }
+    }
+  }
+}
