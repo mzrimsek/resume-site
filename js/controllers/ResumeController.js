@@ -14,10 +14,10 @@ app.controller('ResumeController', ['$scope', function($scope) {
     google_plus: 'https://plus.google.com/+MikeZrimsek'
   };
   $scope.jobs = [
-    new Job('Kent State University Residence Services', 'OH', 'Web Software Engineer', 'December 2015', 'Present', 'https://www.kent.edu/housing', '', [
-      //new Project('', '')
+    new Job('Kent State University Residence Services', 'OH', 'Web Software Engineer', 'December 2015', 'Present', 'https://www.kent.edu/housing', 'As a division of the Residence Services Department, one of the main goals was to build software that would not only help students living on campus, but to also those who manage the day to day operation of the buildings.', [
+      new Project('Check In/Check Out', 'An application built on the .NET MVC framework to replace the existing process of checking students in and out of dorms at the start and finish of each semester.  My duties on this project varied from heavy code refactoring, to new feature implmentation, to rewriting the front-end to utilize React.')
     ]),
-    new Job('Verys', 'CA', 'Junior Web Software Engineer', 'January 2014', 'September 2015', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recently recognized as one of the fastest growing companies in Orange County, CA.  I worked on several projects, but have presented the most notable ones below.', [
+    new Job('Verys', 'CA', 'Junior Web Software Engineer', 'January 2014', 'September 2015', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recognized as one of the fastest growing companies in Orange County, CA.  I worked on several projects, but have presented the most notable ones below.', [
       new Project('TheRoadmap', 'A financial planner website originally built on a LAMP stack, but then rewritten in Java.  The application utilized the Spring framework using Thymeleaf as the templating engine, built with Gradle, running on a Tomcat server.  My duties on this project consisted of porting the codebase from PHP to Java, development and testing of new and existing features, server maintenance, and codebase upkeep.'),
       new Project('Parcel Pending', 'An electronic locker system used in apartment complex for easy, centralized package delivery.  My duties on this project revolved around doing extensive testing of both the website and the API developed for accessing information about the lockers.  Formulated thorough test cases to aid in regression testing that was required during each project sprint.')
     ])
@@ -29,7 +29,9 @@ app.controller('ResumeController', ['$scope', function($scope) {
         new Skill('Spring', 75)
       ]),
       new Language(new Skill('C/C++', 45), []),
-      new Language(new Skill('C#', 60), []),
+      new Language(new Skill('C#', 70), [
+          new Skill('.NET MVC', 60)
+      ]),
       new Language(new Skill('HTML5/CSS3', 80), []),
       new Language(new Skill('Javascript/JQuery', 80), [
         new Skill('Node', 45),
@@ -67,7 +69,6 @@ var calcAge = function(birthMonth, birthDay, birthYear) {
   }
   return age;
 };
-
 /**
  * Constructor for new Job object
  * @param {String} company   Name of company
