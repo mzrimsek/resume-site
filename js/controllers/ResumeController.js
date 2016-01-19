@@ -3,7 +3,7 @@ app.controller('ResumeController', ['$scope', function($scope) {
     name: 'Michael Zrimsek',
     title: 'Software Engineer',
     img: 'img/profile_pic.jpg',
-    desc: 'I am a ' + calcAge(7, 22, 1993) + ' year old Software Engineer who has been coding for about ' + (new Date().getFullYear() - 2009) + ' years, ever since I discovered how much I loved it during High School.  I am extremely passioniate about my work and am always striving to find something new and exciting to get my hands on.  Currently I am infatuated with the potential that the web has to offer as a development platform - I love keeping up on all the new technologies that are always comings out and trying to apply them to small projects, time permitting.  I am still working my way through school, but have an expected graduation of Spring 2017.  School takes up a considerable amount of my time, but I work on honing my skills in my free time.  I enjoy the feeling of setting out to learn something new and the pride that follows the successful application of it.',
+    desc: 'I am a ' + calcAge("1993/07/22") + ' year old Software Engineer who has been coding for about ' + (new Date().getFullYear() - 2009) + ' years, ever since I discovered how much I loved it during High School.  I am extremely passioniate about my work and am always striving to find something new and exciting to get my hands on.  Currently I am infatuated with the potential that the web has to offer as a development platform - I love keeping up on all the new technologies that are always comings out and trying to apply them to small projects, time permitting.  I am still working my way through school, but have an expected graduation of Spring 2017.  School takes up a considerable amount of my time, but I work on honing my skills in my free time.  I enjoy the feeling of setting out to learn something new and the pride that follows the successful application of it.',
     location: 'Aurora, OH',
     email: 'mikezrimsek@gmail.com',
     website: 'http://zrimsek.com'
@@ -14,8 +14,8 @@ app.controller('ResumeController', ['$scope', function($scope) {
     google_plus: 'https://plus.google.com/+MikeZrimsek'
   };
   $scope.jobs = [
-    new Job('Kent State University Residence Services', 'OH', 'Web Software Engineer', 'December 2015', 'Present', 'https://www.kent.edu/housing', 'As a division of the Residence Services Department, one of the main goals was to build software that would not only help students living on campus, but to also those who manage the day to day operation of the buildings.', [
-      new Project('Check In/Check Out', 'An application built on the .NET MVC framework to replace the existing process of checking students in and out of dorms at the start and finish of each semester.  My duties on this project varied from heavy code refactoring, to new feature implmentation, to rewriting the front-end to utilize React.')
+    new Job('Kent State University Residence Services', 'OH', 'Web Software Engineer', 'December 2015', null, 'https://www.kent.edu/housing', 'As a division of the Residence Services Department, one of the main goals was to build software that would not only help students living on campus, but to also those who manage the day to day operation of the buildings.', [
+      new Project('Check In/Check Out', 'An application built on the .NET MVC framework to replace the existing process of checking students in and out of dorms at the start and finish of each semester.  My duties on this project varied from new feature implmentation, to heavy code refactoring, to rewriting the front-end to utilize React.')
     ]),
     new Job('Verys', 'CA', 'Junior Web Software Engineer', 'January 2014', 'September 2015', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recognized as one of the fastest growing companies in Orange County, CA.  I worked on several projects, but have presented the most notable ones below.', [
       new Project('TheRoadmap', 'A financial planner website originally built on a LAMP stack, but then rewritten in Java.  The application utilized the Spring framework using Thymeleaf as the templating engine, built with Gradle, running on a Tomcat server.  My duties on this project consisted of porting the codebase from PHP to Java, development and testing of new and existing features, server maintenance, and codebase upkeep.'),
@@ -46,7 +46,7 @@ app.controller('ResumeController', ['$scope', function($scope) {
     ]
   };
   $scope.schools = [
-    new School('Kent State University', 'OH', 'Computer Science', 'September 2015', 'Present'),
+    new School('Kent State University', 'OH', 'Computer Science', 'September 2015', null),
     new School('Irvine Valley College', 'CA', 'Computer Science', 'September 2012', 'May 2015'),
     new School('Cal Poly Pomona', 'CA', 'Computer Science', 'September 2011', 'May 2012')
   ];
@@ -54,20 +54,14 @@ app.controller('ResumeController', ['$scope', function($scope) {
 
 /**
  * Calculate current age based on current day of the year
- * @param  {Integer} birthMonth Number for month of birthday to check for (i.e. 3 for March, 12 for December, etc)
- * @param  {[type]} birthDay   Number for day of month in birthday to check for
- * @param  {[type]} birthYear  Four digit representation of year of birthday
+ * @param  {String} dateString  String representation of date to calculate age in 'YYYY/MM/DD' format
  * @return {Integer}            Current age based on entered birthday and current day of the year
  */
-var calcAge = function(birthMonth, birthDay, birthYear) {
-  var today = new Date();
-  var age = today.getFullYear() - birthYear;
-  if (today.getMonth() < birthMonth - 1) {
-    age--;
-  } else if ((today.getMonth() === birthMonth - 1) && (today.getDay() < birthDay)) {
-    age--;
-  }
-  return age;
+var calcAge = function(dateString) {
+  var birthDate = new Date(dateString);
+  var ageDif = Date.now() - birthDate.getTime();
+  var ageDate = new Date(ageDif);
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
 };
 /**
  * Constructor for new Job object
@@ -75,7 +69,7 @@ var calcAge = function(birthMonth, birthDay, birthYear) {
  * @param {String} location  State where company is located
  * @param {String} title     Job title at company
  * @param {String} startDate Month, Year started at company
- * @param {String} endDate   Month, Year ended at company - set to present if still employed there
+ * @param {String} endDate   Month, Year ended at company - set to 'Present' if null
  * @param {String} url       URL of company website
  * @param {String} desc      Description of what the company does
  * @param {Array} projects  Array of most important projects worked on while employed
@@ -85,7 +79,7 @@ function Job(company, location, title, startDate, endDate, url, desc, projects) 
   this.location = location;
   this.title = title;
   this.startDate = startDate;
-  this.endDate = endDate;
+  this.endDate = endDate || 'Present';
   this.url = url;
   this.desc = desc;
   this.projects = projects;
@@ -102,7 +96,7 @@ function Project(name, desc) {
 /**
  * [Language description]
  * @param {Skill} primary   The parent skill - usually the main language of the subskills.
- * @param {Array} subskills List of child skills - usually frameworks, libraries, etc.
+ * @param {Skill Array} subskills List of child skills - usually frameworks, libraries, etc.
  */
 function Language(primary, subskills) {
   this.primary = primary;
@@ -130,12 +124,12 @@ function Skill(name, perc) {
  * @param {String} location  State where school is located
  * @param {String} major     Major of studies at school
  * @param {String} startDate Month, Year started attending school
- * @param {[type]} endDate   Month, Year finished attending school - set to present if still attending
+ * @param {String} endDate   Month, Year finished attending school - set to 'Present' if null
  */
 function School(name, location, major, startDate, endDate) {
   this.name = name;
   this.location = location;
   this.major = major;
   this.startDate = startDate;
-  this.endDate = endDate;
+  this.endDate = endDate || 'Present';
 }

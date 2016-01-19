@@ -26,6 +26,11 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('images', function() {
+  return gulp.src('img/*.*')
+    .pipe(gulp.dest('dist/img'));
+});
+
 gulp.task('app', function() {
   return gulp.src('js/*.js')
   .pipe(uglify())
@@ -50,9 +55,11 @@ gulp.task('directives-jade', function() {
   .pipe(gulp.dest('dist/js/directives'));
 });
 
+gulp.task('static', ['templates', 'styles', 'images']);
+
 gulp.task('directives', ['directives-js', 'directives-jade']);
 
-gulp.task('build', ['templates', 'styles', 'app', 'controllers', 'directives']);
+gulp.task('build', ['static', 'app', 'controllers', 'directives']);
 
 gulp.task('default', ['build'], function() {
   gulp.watch(
