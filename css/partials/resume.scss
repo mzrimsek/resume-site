@@ -32,6 +32,10 @@
     width: 36px;
     height: 36px;
     display: inline-block;
+    color:$lightPrimary;
+    :hover{
+      color:$darkPrimary;
+    }
     .fa {
       font-size: 25px;
       padding-top: 8px;

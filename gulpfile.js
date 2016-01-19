@@ -7,7 +7,7 @@ var autoprefixer = require('autoprefixer');
 var cssnano = require('gulp-cssnano');
 var serve = require('gulp-serve');
 
-var gulpWatchList = ['templates/*jade', 'templates/**/*.jade', 'css/*.scss', 'js/*.js', 'js/**/*.js'];
+var gulpWatchList = ['templates/*jade', 'templates/**/*.jade', 'css/*.scss', 'css/partials/*.scss', 'js/*.js', 'js/**/*.js'];
 
 gulp.task('templates', function() {
   return gulp.src('templates/*.jade')
