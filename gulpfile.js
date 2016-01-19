@@ -31,7 +31,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('app', function() {
+gulp.task('main', function() {
   return gulp.src('js/*.js')
   .pipe(uglify())
   .pipe(gulp.dest('dist/js'));
@@ -59,7 +59,9 @@ gulp.task('static', ['templates', 'styles', 'images']);
 
 gulp.task('directives', ['directives-js', 'directives-jade']);
 
-gulp.task('build', ['static', 'app', 'controllers', 'directives']);
+gulp.task('app', ['main', 'controllers', 'directives']);
+
+gulp.task('build', ['static', 'app']);
 
 gulp.task('default', ['build'], function() {
   gulp.watch(
