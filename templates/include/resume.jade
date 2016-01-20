@@ -1,9 +1,9 @@
-div.main(ng-controller="ResumeController" id="resume")
+.main#resume(ng-controller="ResumeController")
 
   header.header
-    div.container
+    .container
       img.profile-img.img-responsive.img-circle.left(ng-src="{{about.img}}")
-      div.profile-info.left
+      .profile-info.left
         h1.name {{about.name}}
         h2.title {{about.title}}
         ul.networks.list-inline
@@ -20,35 +20,35 @@ div.main(ng-controller="ResumeController" id="resume")
          i.fa.fa-paper-plane
          span Contact Me
   
-  div.container.sections-wrapper
-    div.row
+  .container.sections-wrapper
+    .row
     
-      div.primary.col-md-8.col-sm-12.col-xs-12
+      .primary.col-md-8.col-sm-12.col-xs-12
         section.about.section
-          div.section-inner
+          .section-inner
             h2.heading About Me
-            div.content
+            .content
               p {{about.desc}}
         
         section.experience.section
-          div.section-inner
+          .section-inner
             h2.heading Work Experience
-            div.content
-              div.item(ng-repeat="job in jobs")
+            .content
+              .item(ng-repeat="job in jobs")
                 job-info(info="job")
         
         section.education.section
-          div.section-inner
+          .section-inner
             h2.heading Education
-            div.content
-              div.item(ng-repeat="school in schools")
+            .content
+              .item(ng-repeat="school in schools")
                 school-info(info="school")
       
-      div.secondary.col-md-4.col-sm-12.col-xs-12
+      .secondary.col-md-4.col-sm-12.col-xs-12
         aside.info.aside.section
-          div.section-inner
+          .section-inner
             h2.heading.sr-only Basic Information
-            div.content
+            .content
               ul.list-unstyled
                 li
                   i.fa.fa-map-marker
@@ -64,12 +64,12 @@ div.main(ng-controller="ResumeController" id="resume")
                   a(ng-href="{{about.website}}" target="_blank") {{about.website}}
         
         aside.skills.aside.section
-          div.section-inner
+          .section-inner
             h2.heading Skills
-            div.content
+            .content
               p.intro {{skills.info}}
-              div.skillset
-                div.item.clearfix(ng-repeat="lang in skills.languages")
+              .skillset
+                .item.clearfix(ng-repeat="lang in skills.languages")
                   skill-info(info="lang.primary")
-                  div.subskill.right(ng-repeat="subskill in lang.subskills")
+                  .subskill.right(ng-repeat="subskill in lang.subskills")
                     skill-info(info="subskill")
