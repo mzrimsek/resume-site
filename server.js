@@ -14,6 +14,11 @@ app.get('/', function(req, res){
   res.sendFile('index.html');
 });
 
+app.post('/deploy/', function(req, res){
+  var spawn = require('child_process').spawn,
+  deploy = spawn('sh', ['./update_server.sh']);
+});
+
 app.listen(port);
 console.log("Server started on port " + port);
 exports = module.exports = app;
