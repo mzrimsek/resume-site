@@ -14,8 +14,8 @@ app.controller('ResumeController', ['$scope', function($scope) {
     google_plus: 'https://plus.google.com/+MikeZrimsek'
   };
   $scope.jobs = [
-    new Job('Kent State University Residence Services', 'OH', 'Web Software Engineer', 'December 2015', null, 'https://www.kent.edu/housing', 'As a division of the Residence Services Department, one of the main goals was to build software that would not only help students living on campus, but to also those who manage the day to day operation of the buildings.', [
-      new Project('Check In/Check Out', 'An application built on the .NET MVC framework to replace the existing process of checking students in and out of dorms at the start and finish of each semester.  My duties on this project varied from new feature implmentation, to heavy code refactoring, to rewriting the sections of the front-end application to utilize React.  From a development standpoint, after being put on this project there was a strong push toward more reusable and maintainable coding practices, ultimately cleaning up old code to reduce bloat and redundancies, while also introducing new code in a much more concise and efficient manner.')
+    new Job('Kent State University Residence Services', 'OH', 'Software Engineer', 'December 2015', null, 'https://www.kent.edu/housing', 'As a division of the Residence Services Department, one of the main goals was to build software that would not only help students living on campus, but to also those who manage the day to day operation of the buildings.', [
+      new Project('Check In/Check Out', 'An application built on the .NET MVC framework to replace the existing process of checking students in and out of dorms at the start and finish of each semester. In addition to this project, there was also an accompanying Android application. My duties on this project varied from new feature implementation on both web and Android, to designing new sections of the database, to writing sections of our front-end application to utilize React. While working on this project there was a strong push toward more reusable and maintainable coding practices, including an emphasis on Test Driven Development. Throughout development, refactoring of any of the codebase currently being touched was highly encouraged.')
     ]),
     new Job('Verys', 'CA', 'Junior Web Software Engineer', 'January 2014', 'November 2015', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recognized as one of the fastest growing companies in Orange County, CA.  I worked on several projects, but have presented the most notable ones below.', [
       new Project('TheRoadmap', 'A financial planner website originally built on a LAMP stack, but then rewritten in Java.  The application utilized the Spring framework using Thymeleaf as the templating engine, built with Gradle, running on a Tomcat server.  My duties on this project consisted of porting the codebase from PHP to Java, development and testing of new and existing features, server maintenance, and codebase upkeep.'),
@@ -38,7 +38,7 @@ app.controller('ResumeController', ['$scope', function($scope) {
         new Skill('Angular', 50),
         new Skill('React/Redux', 60)
       ]),
-      new Language(new Skill('MySQL', 70), []),
+      new Language(new Skill('MySQL', 75), []),
       new Language(new Skill('Python', 50), [
         new Skill('Django', 30)
       ]),
