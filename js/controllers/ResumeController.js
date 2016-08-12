@@ -26,21 +26,24 @@ app.controller('ResumeController', ['$scope', function($scope) {
     info: 'My goal is to constantly be learning something as there is always something new and exciting to try out in a project.  Below are the skills I have learned and honed through projects I have worked on both at work and in my spare time.',
     languages: [
       new Language(new Skill('Java', 95), [
-        new Skill('Spring', 75)
+        new Skill('Spring', 70),
+        new Skill('Android', 25)
       ]),
-      new Language(new Skill('C/C++', 45), []),
-      new Language(new Skill('C#', 80), [
-          new Skill('.NET MVC', 75)
+      new Language(new Skill('C#', 90), [
+        new Skill('.NET MVC', 75),
+        new Skill('Entity Framework', 75),
+        new Skill('.NET Core', 60)
       ]),
-      new Language(new Skill('HTML5/CSS3', 80), []),
-      new Language(new Skill('Javascript/JQuery', 80), [
-        new Skill('Node', 60),
+      new Language(new Skill('Javascript/JQuery', 85), [
+        new Skill('Node', 75),
         new Skill('Angular', 50),
-        new Skill('React/Redux', 60)
+        new Skill('React', 80)
       ]),
-      new Language(new Skill('MySQL', 75), []),
-      new Language(new Skill('Python', 50), [
-        new Skill('Django', 30)
+      new Language(new Skill('HTML5/CSS3', 90), []),
+      new Language(new Skill('SQL', 75), []),
+      new Language(new Skill('C/C++', 45), []),
+      new Language(new Skill('Python', 35), [
+        new Skill('Django', 25)
       ]),
       new Language(new Skill('PHP', 30), [])
     ]

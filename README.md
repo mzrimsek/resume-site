@@ -8,7 +8,7 @@ This is my resume site found at [zrimsek.com](http://zrimsek.com).
 * SASS
 * Gulp
 * Bootstrap
-* jQuery
+* JQuery
 * AngularJS
 
 ## Build Process
