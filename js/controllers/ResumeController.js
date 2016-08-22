@@ -30,9 +30,7 @@ app.controller('ResumeController', ['$scope', function($scope) {
         new Skill('Android', 25)
       ]),
       new Language(new Skill('C#', 90), [
-        new Skill('.NET MVC', 75),
-        new Skill('Entity Framework', 75),
-        new Skill('.NET Core', 60)
+        new Skill('.NET MVC', 80)
       ]),
       new Language(new Skill('Javascript/JQuery', 85), [
         new Skill('Node', 75),
