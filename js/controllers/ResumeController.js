@@ -11,7 +11,8 @@ app.controller('ResumeController', ['$scope', function($scope) {
   $scope.networks = {
     github: 'https://github.com/mzrimsek',
     linkedin: 'https://www.linkedin.com/in/mzrimsek',
-    google_plus: 'https://plus.google.com/+MikeZrimsek'
+    google_plus: 'https://plus.google.com/+MikeZrimsek',
+    medium: 'https://medium.com/@mikezrimsek'
   };
   $scope.jobs = [
     new Job('Kent State University Residence Services', 'OH', 'Software Engineer', 'December 2015', null, 'https://www.kent.edu/housing', 'As a division of the Residence Services Department, one of the main goals was to build software that would not only help students living on campus, but to also those who manage the day to day operation of the buildings.', [
