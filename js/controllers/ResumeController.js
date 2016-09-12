@@ -5,7 +5,7 @@ app.controller('ResumeController', ['$scope', function($scope) {
     img: 'img/profile_pic.jpg',
     desc: 'I am a ' + calcAge("1993/07/22") + ' year old Software Engineer who has been coding for about ' + (new Date().getFullYear() - 2009) + ' years, ever since I discovered how much I loved it during High School.  I am extremely passioniate about my work and am always striving to find something new and exciting to get my hands on.  Currently I am infatuated with the potential that the web has to offer as a development platform - I love keeping up on all the new technologies that are always comings out and trying to apply them to small projects, time permitting.  I am still working my way through school, but have an expected graduation of Spring 2017.  School takes up a considerable amount of my time, but I work on honing my skills in my free time.  I enjoy the feeling of setting out to learn something new and the pride that follows the successful application of it.',
     location: 'Aurora, OH',
-    email: 'mikezrimsek@gmail.com',
+    email: 'mike@zrimsek.com',
     website: 'http://zrimsek.com'
   };
   $scope.networks = {
@@ -55,28 +55,13 @@ app.controller('ResumeController', ['$scope', function($scope) {
   ];
 }]);
 
-/**
- * Calculate current age based on current day of the year
- * @param  {String} dateString  String representation of date to calculate age in 'YYYY/MM/DD' format
- * @return {Integer}            Current age based on entered birthday and current day of the year
- */
 var calcAge = function(dateString) {
   var birthDate = new Date(dateString);
   var ageDif = Date.now() - birthDate.getTime();
   var ageDate = new Date(ageDif);
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 };
-/**
- * Constructor for new Job object
- * @param {String} company   Name of company
- * @param {String} location  State where company is located
- * @param {String} title     Job title at company
- * @param {String} startDate Month, Year started at company
- * @param {String} endDate   Month, Year ended at company - set to 'Present' if null
- * @param {String} url       URL of company website
- * @param {String} desc      Description of what the company does
- * @param {Array} projects  Array of most important projects worked on while employed
- */
+
 function Job(company, location, title, startDate, endDate, url, desc, projects) {
   this.company = company;
   this.location = location;
@@ -87,29 +72,17 @@ function Job(company, location, title, startDate, endDate, url, desc, projects) 
   this.desc = desc;
   this.projects = projects;
 }
-/**
- * Constructor for new Project Object
- * @param {String} name Name of project
- * @param {String} desc Description of what project is and parts worked on
- */
+
 function Project(name, desc) {
   this.name = name;
   this.desc = desc;
 }
-/**
- * [Language description]
- * @param {Skill} primary   The parent skill - usually the main language of the subskills.
- * @param {Skill Array} subskills List of child skills - usually frameworks, libraries, etc.
- */
+
 function Language(primary, subskills) {
   this.primary = primary;
   this.subskills = subskills;
 }
-/**
- * Constructor for new Skill object
- * @param {String} name Name of skill
- * @param {Integer} perc Number representation of knowledge with skill
- */
+
 function Skill(name, perc) {
   var setLevel = function(perc) {
     if (perc <= 30) return 'Beginner';
@@ -121,14 +94,7 @@ function Skill(name, perc) {
   this.perc = perc;
   this.level = setLevel(perc);
 }
-/**
- * Constructor for new School object
- * @param {String} name      Name of school
- * @param {String} location  State where school is located
- * @param {String} major     Major of studies at school
- * @param {String} startDate Month, Year started attending school
- * @param {String} endDate   Month, Year finished attending school - set to 'Present' if null
- */
+
 function School(name, location, major, startDate, endDate) {
   this.name = name;
   this.location = location;
