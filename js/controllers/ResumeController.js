@@ -16,7 +16,8 @@ app.controller('ResumeController', ['$scope', function($scope) {
     twitter: 'https://twitter.com/MikeZrimsek'
   };
   $scope.jobs = [
-    new Job('Kent State University Residence Services', 'OH', 'Software Engineer', 'December 2015', null, 'https://www.kent.edu/housing', 'As a division of the Residence Services Department, one of the main goals was to build software that would not only help students living on campus, but to also those who manage the day to day operation of the buildings.', [
+    new Job('Progressive Insurance', 'OH', 'Associate Applications Developer', 'July 2017', null, 'https://www.progressive.com/', '', []),
+    new Job('Kent State University Residence Services', 'OH', 'Software Engineer', 'December 2015', 'May 2017', 'https://www.kent.edu/housing', 'As a division of the Residence Services Department, one of the main goals was to build software that would not only help students living on campus, but to also those who manage the day to day operation of the buildings.', [
       new Project('Check In/Check Out', 'An application built on the .NET MVC framework to replace the existing process of checking students in and out of dorms at the start and finish of each semester. In addition to this project, there was also an accompanying Android application. My duties on this project varied from new feature implementation on both web and Android, to designing new sections of the database, to writing sections of our front-end application to utilize React. While working on this project there was a strong push toward more reusable and maintainable coding practices, including an emphasis on Test Driven Development. Throughout development, refactoring of any of the codebase currently being touched was highly encouraged.')
     ]),
     new Job('Verys', 'CA', 'Junior Web Software Engineer', 'January 2014', 'November 2015', 'http://verys.com', 'Verys - a boutique, custom software development company specializing in web and mobile applications - was recognized as one of the fastest growing companies in Orange County, CA.  I worked on several projects, but have presented the most notable ones below.', [
@@ -49,7 +50,7 @@ app.controller('ResumeController', ['$scope', function($scope) {
     ]
   };
   $scope.schools = [
-    new School('Kent State University', 'OH', 'Computer Science', 'September 2015', null),
+    new School('Kent State University', 'OH', 'Computer Science', 'September 2015', 'May 2017'),
     new School('Irvine Valley College', 'CA', 'Computer Science', 'September 2012', 'May 2015'),
     new School('Cal Poly Pomona', 'CA', 'Computer Science', 'September 2011', 'May 2012')
   ];
