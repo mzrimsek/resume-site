@@ -13,6 +13,7 @@ app.controller('ResumeController', ['$scope', function($scope) {
     linkedin: 'https://www.linkedin.com/in/mzrimsek',
     google_plus: 'https://plus.google.com/+MikeZrimsek',
     medium: 'https://medium.com/@mikezrimsek',
+    codepen: 'https://codepen.io/mzrimsek',
     twitter: 'https://twitter.com/MikeZrimsek'
   };
   $scope.jobs = [
