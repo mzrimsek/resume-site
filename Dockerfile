@@ -14,7 +14,7 @@ RUN npm install
 COPY . /usr/src/app
 
 # build the app
-RUN gulp build
+RUN node node_modules/gulp/bin/gulp.js build
 
 # expose the port for the app's server
 EXPOSE 3000
