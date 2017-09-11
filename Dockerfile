@@ -8,13 +8,13 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app
 
 # install dependencies
-CMD ["npm" "install"]
+RUN npm install
 
 # copy code needed to run app
 COPY . /usr/src/app
 
 # build the app
-CMD ["gulp", "build"]
+RUN gulp build
 
 # expose the port for the app's server
 EXPOSE 3000
