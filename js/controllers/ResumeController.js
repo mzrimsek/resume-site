@@ -35,18 +35,18 @@ app.controller('ResumeController', ['$scope', function ($scope) {
         new Skill('.NET MVC', 90)
       ]),
       new Language(new Skill('JavaScript/TypeScript', 95), [
-        new Skill('Node', 75),
         new Skill('Angular', 80),
         new Skill('React', 70),
+        new Skill('NodeJS', 75),
         new Skill('Express', 75)
       ]),
       new Language(new Skill('Java', 90), [
         new Skill('Spring', 70),
         new Skill('Android', 25)
       ]),
-      new Language(new Skill('HTML5/CSS3', 90), []),
-      new Language(new Skill('SQL', 70), []),
-      new Language(new Skill('Go', 70), []),
+      new Language(new Skill('HTML5/CSS3', 85), []),
+      new Language(new Skill('SQL', 65), []),
+      new Language(new Skill('Go', 60), []),
       new Language(new Skill('C/C++', 40), []),
       new Language(new Skill('Python', 35), [
         new Skill('Django', 25)
