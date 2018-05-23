@@ -17,7 +17,8 @@ app.controller('ResumeController', ['$scope', function ($scope) {
     twitter: 'https://twitter.com/MikeZrimsek'
   };
   $scope.jobs = [
-    new Job('Progressive Insurance', 'OH', 'Associate Applications Developer', 'July 2017', null, 'https://www.progressive.com/', 'Progressive is one of the largest auto insurance providers in the United States, serving millions of customers.', [
+    new Job('RoviSys', 'OH', 'Software Developer', 'June 2018', null, 'https://www.rovisys.com/', 'RoviSys specializes in automation and information solutions.', []),
+    new Job('Progressive Insurance', 'OH', 'Associate Applications Developer', 'July 2017', 'May 2018', 'https://www.progressive.com/', 'Progressive is one of the largest auto insurance providers in the United States, serving millions of customers.', [
       new Project('CHAI 2', 'An initiative to consume an API that utilized machine learning to deflect chat sessions where applicable. Based on the question a user asked, we used an AI trained with intents to deliver precanned responses if it would likely answer their question. Since this has been live nearly 50% of eligible chat sessions have been deferred.')
     ]),
     new Job('Kent State University Residence Services', 'OH', 'Software Engineer', 'December 2015', 'May 2017', 'https://www.kent.edu/housing', 'As a division of the Residence Services Department, one of the main goals was to build software that would not only help students living on campus, but to also those who manage the day to day operation of the buildings.', [
