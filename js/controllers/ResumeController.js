@@ -14,8 +14,8 @@ app.controller('ResumeController', ['$scope', function ($scope) {
     medium: 'https://medium.com/@mikezrimsek'
   };
   $scope.jobs = [
-    new Job('RoviSys', 'OH', 'Software Developer', 'June 2018', null, 'https://www.rovisys.com/', 'RoviSys specializes in automation and information solutions.', [
-      new Project('RUNNER', 'A CEO iniative to streamline the collection and distribution of company news in multiple mediums. It utilizes an Angular front-end and .NET Core back-end to gather input from management. Input is then reviewed and distributed to the enterprise in two core ways - as a bi-monthly email generated from approved submissions, and as a news feed displayed on TVs in offices across the country.'),
+    new Job('RoviSys', 'OH', 'Software Developer', 'June 2018', null, 'https://www.rovisys.com/', 'RoviSys is a leading system integrator and custom software solutions company with a presence around the globe.', [
+      new Project('RUNNER', 'A CEO iniative to streamline the collection and distribution of company news in multiple mediums. It utilizes an Angular front-end and .NET Core back-end to gather input from management. Input is then reviewed and distributed to the enterprise in two core ways - as a bi-monthly email generated from approved submissions, and as a news feed displayed on TVs in offices around the world.'),
       new Project('Various Client Applications', 'Primarily focused on streamlining client systems to improve their ability to monitor data collection devices at sites all around the country. Many of these projects utilized a combination of Angular, .NET API, .NET MVC, and Node.js as their core technologies.')
     ]),
     new Job('Progressive Insurance', 'OH', 'Associate Applications Developer', 'July 2017', 'May 2018', 'https://www.progressive.com/', 'Progressive is one of the largest auto insurance providers in the United States, serving millions of customers.', [
