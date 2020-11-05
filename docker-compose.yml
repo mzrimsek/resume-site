@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  resume_site:
+  web:
     image: ghcr.io/mzrimsek/resume-site:latest
     container_name: resume_site
     port:
