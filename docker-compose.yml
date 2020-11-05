@@ -4,6 +4,6 @@ services:
   web:
     image: ghcr.io/mzrimsek/resume-site:latest
     container_name: resume_site
-    port:
+    ports:
       - ${HOST_PORT}:3000
     restart: unless-stopped
