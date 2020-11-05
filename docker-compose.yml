@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  resume_site:
+    image: ghcr.io/mzrimsek/resume-site:latest
+    container_name: resume_site
+    port:
+      - ${HOST_PORT}:3000
+    restart: unless-stopped
