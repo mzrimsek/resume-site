@@ -6,4 +6,16 @@ services:
     container_name: resume_site
     ports:
       - ${HOST_PORT}:3000
+    networks:
+      - public
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${TRAEFIK_SERVICE_NAME}.rule=Host(`${TRAEFIK_PROXY_URL}`)"
+      - "traefik.http.routers.${TRAEFIK_SERVICE_NAME}.entrypoints=${TRAEFIK_ENTRYPOINT}"
+      - "traefik.http.services.${TRAEFIK_SERVICE_NAME}.loadbalancer.server.port=${HOST_PORT}"
     restart: unless-stopped
+    
+networks:
+  public:
+    external:
+      name: ${TRAEFIK_PUBLIC_NETWORK}
