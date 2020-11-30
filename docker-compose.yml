@@ -4,16 +4,14 @@ services:
   web:
     image: ghcr.io/mzrimsek/resume-site:latest
     container_name: resume_site
-    ports:
-      - ${HOST_PORT}:3000
     networks:
       - public
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.${TRAEFIK_SERVICE_NAME}.rule=${TRAEFIK_HOST_RULE}"
-      - "traefik.http.routers.${TRAEFIK_SERVICE_NAME}.entrypoints=${TRAEFIK_ENTRYPOINT}"
-      - "traefik.http.routers.${TRAEFIK_SERVICE_NAME}.tls.certresolver=${TRAEFIK_TLS_RESOLVER}"
-      - "traefik.http.services.${TRAEFIK_SERVICE_NAME}.loadbalancer.server.port=${HOST_PORT}"
+      - "traefik.http.routers.resume_frontend.rule=${TRAEFIK_HOST_RULE}"
+      - "traefik.http.routers.resume_frontend.entrypoints=websecure"
+      - "traefik.http.routers.resume_frontend.tls.certresolver=tlsresolver"
+      - "traefik.http.services.resume_frontend.loadbalancer.server.port=3000"
     restart: unless-stopped
     
 networks:
