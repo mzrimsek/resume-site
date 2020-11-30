@@ -6,7 +6,7 @@ app.controller('ResumeController', ['$scope', function ($scope) {
     desc: 'I am a ' + calcAge("1993/07/22") + ' year old Software Developer who has been coding for about ' + (new Date().getFullYear() - 2009) + ' years. I currently spend a lot of my time focused on web technologies and their potential to make wide ranging impact on a variety of devices. There are few things more fulfilling than identifying a problem and then successfully architecting a solution and implementing it.',
     location: 'Streetsboro, OH',
     email: 'mikezrimsek@gmail.com',
-    website: 'http://zrimsek.com'
+    website: 'https://zrimsek.com'
   };
   $scope.networks = {
     github: 'https://github.com/mzrimsek',
@@ -43,7 +43,7 @@ app.controller('ResumeController', ['$scope', function ($scope) {
         new Skill('React', 85),
         new Skill('Node.js', 75)
       ]),
-      new Language(new Skill('Java', 90), [	
+      new Language(new Skill('Java', 90), [
         new Skill('Spring MVC', 70)
       ]),
       new Language(new Skill('HTML5/CSS3', 85), []),
