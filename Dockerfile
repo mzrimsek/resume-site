@@ -1,5 +1,7 @@
 FROM node:8.11.4-jessie
 
+LABEL org.opencontainers.image.source https://github.com/mzrimsek/resume-site
+
 # create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
