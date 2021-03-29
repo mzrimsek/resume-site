@@ -1,6 +1,6 @@
 app.controller('ResumeController', ['$scope', function ($scope) {
   $scope.about = {
-    name: 'Michael Zrimsek',
+    name: 'Mike Zrimsek',
     title: 'Full Stack Software Developer',
     img: 'img/profile_pic.jpg',
     desc: 'I am a ' + calcAge("1993/07/22") + ' year old Software Developer who has been coding for about ' + (new Date().getFullYear() - 2009) + ' years. I currently spend a lot of my time focused on web technologies and their potential to make wide ranging impact on a variety of devices. There are few things more fulfilling than identifying a problem and then successfully architecting a solution and implementing it.',
