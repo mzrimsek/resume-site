@@ -43,14 +43,14 @@ app.controller('ResumeController', ['$scope', function ($scope) {
         new Skill('React', 85),
         new Skill('Node.js', 75)
       ]),
+      new Language(new Skill('Docker', 80), [
+        new Skill('Docker Compose', 75)
+      ]),
       new Language(new Skill('Java', 90), [
         new Skill('Spring MVC', 70)
       ]),
       new Language(new Skill('HTML5/CSS3', 85), []),
-      new Language(new Skill('Docker', 80), [
-        new Skill('Docker Compose', 75)
-      ]),
-      new Language(new Skill('SQL', 65), []),
+      new Language(new Skill('SQL', 60), []),
     ]
   };
   $scope.schools = [
