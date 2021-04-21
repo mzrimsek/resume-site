@@ -48,7 +48,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`<proxy_url>`)
+    - match: Host(`${PROXY_URL}`)
       kind: Rule
       services:
         - name: resume
