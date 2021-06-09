@@ -52,6 +52,7 @@ app.controller('ResumeController', ['$scope', function ($scope) {
       ]),
       new Language(new Skill('HTML5/CSS3', 85), []),
       new Language(new Skill('SQL', 60), []),
+      new Language(new Skill('Golang', 55))
     ]
   };
   $scope.schools = [
