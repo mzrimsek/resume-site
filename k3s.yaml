@@ -33,6 +33,7 @@ spec:
       containers:
         - name: frontend
           image: ghcr.io/mzrimsek/resume-site:latest
+          imagePullPolicy: Always
           ports:
             - name: frontend
               containerPort: 3000
