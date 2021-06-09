@@ -41,7 +41,7 @@ app.controller('ResumeController', ['$scope', function ($scope) {
         new Skill('Angular', 85),
         new Skill('Redux', 80),
         new Skill('React', 85),
-        new Skill('Node.js', 75)
+        new Skill('Node.js', 80)
       ]),
       new Language(new Skill('Docker', 80), [
         new Skill('Docker Compose', 75),
