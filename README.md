@@ -21,5 +21,5 @@ This is my resume site found at [zrimsek.com](http://zrimsek.com).
 * `docker run -p 3000:3000 -d mzrimsek/resume-site`
 
 ## Contact
-* Homepage: [zrimsek.com](http://zrimsek.com)
+* Homepage: [zrimsek.com](https://zrimsek.com)
 * e-mail: [mikezrimsek@gmail.com](mailto:mikezrimsek@gmail.com)
