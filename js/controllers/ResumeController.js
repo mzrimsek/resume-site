@@ -35,7 +35,8 @@ app.controller('ResumeController', ['$scope', function ($scope) {
       new Language(new Skill('C#', 95), [
         new Skill('.NET API', 90),
         new Skill('.NET MVC', 85),
-        new Skill('Entity Framework', 85)
+        new Skill('Entity Framework', 85),
+        new Skill('Blazor', 70)
       ]),
       new Language(new Skill('JavaScript/TypeScript', 95), [
         new Skill('Angular', 85),
@@ -52,7 +53,7 @@ app.controller('ResumeController', ['$scope', function ($scope) {
       ]),
       new Language(new Skill('HTML5/CSS3', 85), []),
       new Language(new Skill('SQL', 60), []),
-      new Language(new Skill('Golang', 30))
+      new Language(new Skill('Golang', 45))
     ]
   };
   $scope.schools = [
