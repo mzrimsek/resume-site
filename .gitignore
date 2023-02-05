@@ -1,8 +1,6 @@
-dist/
-node_modules/
-*.sh
-logs
-*.log
-npm-debug.log*
-.npm
-.idea
+node_modules
+
+/.cache
+/build
+/public/build
+.env
